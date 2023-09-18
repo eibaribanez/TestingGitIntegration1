@@ -1,5 +1,5 @@
 {
-  "revision" : 6,
+  "revision" : 8,
   "compression" : false,
   "dataAnalyzer" : true,
   "replicas" : 1,
@@ -161,7 +161,7 @@
   "name" : "FirstGitIntegration",
   "description" : "FirstGitIntegration",
   "createdAt" : "2023-09-18T14:37:05.998042148",
-  "updatedAt" : "2023-09-18T15:21:11.748438242",
+  "updatedAt" : "2023-09-18T15:53:10.4935161",
   "createdBy" : "a1e03be4-7ba1-462b-a7af-9848c607ead1",
   "updatedBy" : "a1e03be4-7ba1-462b-a7af-9848c607ead1"
 }
