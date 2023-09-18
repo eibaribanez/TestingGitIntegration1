@@ -1,5 +1,5 @@
 {
-  "revision" : 3,
+  "revision" : 4,
   "compression" : false,
   "dataAnalyzer" : true,
   "replicas" : 1,
@@ -14,7 +14,7 @@
     "routeId" : 1,
     "route" : [ {
       "name" : "timer",
-      "nodeId" : "ca390d49-9513-4be8-a28a-8c97ccca0539",
+      "nodeId" : "e05433d7-7f04-4e48-a846-057696bac50a",
       "description" : "",
       "properties" : {
         "_type" : "timer",
@@ -36,7 +36,7 @@
       "kameletPropertiesUrl" : "?timerName=timer&period=1000&repeatCount=0&delay=1000&fixedRate=false&daemon=true&setScheduleTime=false&time=2021-12-31 00:00:00"
     }, {
       "name" : "setBody",
-      "nodeId" : "3340f4a2-d059-4460-b1f3-95db5ad18390",
+      "nodeId" : "f0168d1d-891a-4a63-8d18-68207e486ccd",
       "description" : "",
       "properties" : {
         "_type" : "setBody",
@@ -54,7 +54,7 @@
       "kameletPropertiesUrl" : "?language=Simple&expression=exchangeId: ${exchangeId}&addNamespaces=false&suppressExceptions=false"
     }, {
       "name" : "log",
-      "nodeId" : "f9214401-582f-464f-817d-f666d6fbe825",
+      "nodeId" : "5dfaeb72-7c2a-474a-aaab-cbcd6f5ba510",
       "description" : "",
       "properties" : {
         "_type" : "log",
@@ -87,7 +87,7 @@
   "name" : "FirstGitIntegration",
   "description" : "FirstGitIntegration",
   "createdAt" : "2023-09-18T14:37:05.998042148",
-  "updatedAt" : "2023-09-18T14:38:02.449730596",
+  "updatedAt" : "2023-09-18T15:04:33.244655077",
   "createdBy" : "a1e03be4-7ba1-462b-a7af-9848c607ead1",
   "updatedBy" : "a1e03be4-7ba1-462b-a7af-9848c607ead1"
 }
