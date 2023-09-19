@@ -1,5 +1,5 @@
 {
-  "revision" : 8,
+  "revision" : 10,
   "compression" : false,
   "dataAnalyzer" : true,
   "replicas" : 1,
@@ -14,7 +14,7 @@
     "routeId" : 1,
     "route" : [ {
       "name" : "timer",
-      "nodeId" : "49c82514-e522-4d65-a63e-b38d6c62ae72",
+      "nodeId" : "6634f35c-3276-40c8-ab81-c58cc37ae622",
       "description" : "",
       "properties" : {
         "_type" : "timer",
@@ -36,7 +36,7 @@
       "kameletPropertiesUrl" : "?timerName=timer&period=1000&repeatCount=0&delay=1000&fixedRate=false&daemon=true&setScheduleTime=false&time=2021-12-31 00:00:00"
     }, {
       "name" : "setBody",
-      "nodeId" : "a88d329a-6c55-44f3-9d1b-6bb49bacc066",
+      "nodeId" : "53411213-9992-4bf2-99d9-785ff72c663b",
       "description" : "",
       "properties" : {
         "_type" : "setBody",
@@ -54,7 +54,7 @@
       "kameletPropertiesUrl" : "?language=Simple&expression=exchangeId: ${exchangeId}&addNamespaces=false&suppressExceptions=false"
     }, {
       "name" : "log",
-      "nodeId" : "9de17f8d-32e2-47f0-b7e6-3f2e13bb4e1f",
+      "nodeId" : "c70d6c9e-731b-442d-8f7d-0016ff7ea2d3",
       "description" : "",
       "properties" : {
         "_type" : "log",
@@ -88,7 +88,7 @@
     "routeId" : 2,
     "route" : [ {
       "name" : "timer",
-      "nodeId" : "3f5e7939-742e-4039-bddf-39ee19f0ccaa",
+      "nodeId" : "58ccd504-ec67-4694-bfbd-b293a68a85f1",
       "description" : "",
       "properties" : {
         "_type" : "timer",
@@ -110,7 +110,7 @@
       "kameletPropertiesUrl" : "?timerName=timer&period=1000&repeatCount=0&delay=1000&fixedRate=false&daemon=true&setScheduleTime=false&time=2021-12-31 00:00:00"
     }, {
       "name" : "setBody",
-      "nodeId" : "71c10a40-cb90-4afb-a002-a2b4fd4be026",
+      "nodeId" : "4ba2fea8-0c8a-4e22-9b14-ade8c304f6bb",
       "description" : "",
       "properties" : {
         "_type" : "setBody",
@@ -128,7 +128,7 @@
       "kameletPropertiesUrl" : "?language=Simple&expression=exchangeId: ${exchangeId}&addNamespaces=false&suppressExceptions=false"
     }, {
       "name" : "log",
-      "nodeId" : "47cd617e-0d64-47ee-8e44-c61f4c962a88",
+      "nodeId" : "be8437b9-cdd8-4f26-b67e-96f487a029dd",
       "description" : "",
       "properties" : {
         "_type" : "log",
@@ -155,13 +155,41 @@
       "_type" : "log",
       "kameletPropertiesUrl" : "?loggerName=log&level=INFO&logType=EIP&multiline=false&showAll=false&showBody=true&showBodyType=true&showCaughtException=false&showExchangeId=false&showHeaders=false&showProperties=false&showStackTrace=false&message=headers: ${headers}; body: ${body}"
     } ]
+  }, {
+    "id" : 3,
+    "camelRouteId" : "route-3",
+    "enabled" : true,
+    "routeId" : 3,
+    "route" : [ {
+      "name" : "timer",
+      "nodeId" : "dba8470b-8826-44e4-b385-62e62f4e0649",
+      "description" : "",
+      "properties" : {
+        "_type" : "timer",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "daemon" : true,
+        "delay" : "1000",
+        "fixedRate" : false,
+        "name" : "timer",
+        "period" : "1000",
+        "repeatCount" : "0",
+        "setScheduleTime" : false,
+        "time" : "2021-12-31 00:00:00",
+        "timerName" : "timer",
+        "url" : ""
+      },
+      "_type" : "timer",
+      "kameletPropertiesUrl" : "?timerName=timer&period=1000&repeatCount=0&delay=1000&fixedRate=false&daemon=true&setScheduleTime=false&time=2021-12-31 00:00:00"
+    } ]
   } ],
   "traits" : [ ],
   "id" : "2ff090e0-5738-4309-8c7e-3ad50badee4b",
   "name" : "FirstGitIntegration",
   "description" : "FirstGitIntegration",
   "createdAt" : "2023-09-18T14:37:05.998042148",
-  "updatedAt" : "2023-09-18T15:53:10.4935161",
+  "updatedAt" : "2023-09-19T14:37:35.035261021",
   "createdBy" : "a1e03be4-7ba1-462b-a7af-9848c607ead1",
   "updatedBy" : "a1e03be4-7ba1-462b-a7af-9848c607ead1"
 }
