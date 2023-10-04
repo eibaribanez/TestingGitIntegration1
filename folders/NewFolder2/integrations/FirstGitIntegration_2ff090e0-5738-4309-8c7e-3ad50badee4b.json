@@ -1,5 +1,5 @@
 {
-  "revision" : 10,
+  "revision" : 11,
   "compression" : false,
   "dataAnalyzer" : true,
   "replicas" : 1,
@@ -14,7 +14,7 @@
     "routeId" : 1,
     "route" : [ {
       "name" : "timer",
-      "nodeId" : "6634f35c-3276-40c8-ab81-c58cc37ae622",
+      "nodeId" : "0e8dd713-cc9b-4e43-b804-1b582d43f92a",
       "description" : "",
       "properties" : {
         "_type" : "timer",
@@ -36,7 +36,7 @@
       "kameletPropertiesUrl" : "?timerName=timer&period=1000&repeatCount=0&delay=1000&fixedRate=false&daemon=true&setScheduleTime=false&time=2021-12-31 00:00:00"
     }, {
       "name" : "setBody",
-      "nodeId" : "53411213-9992-4bf2-99d9-785ff72c663b",
+      "nodeId" : "2740dec4-edaf-438a-b429-ebffcc1ff981",
       "description" : "",
       "properties" : {
         "_type" : "setBody",
@@ -54,7 +54,7 @@
       "kameletPropertiesUrl" : "?language=Simple&expression=exchangeId: ${exchangeId}&addNamespaces=false&suppressExceptions=false"
     }, {
       "name" : "log",
-      "nodeId" : "c70d6c9e-731b-442d-8f7d-0016ff7ea2d3",
+      "nodeId" : "d5cb8dbe-9b72-416a-8ac6-1c4d523f9cc6",
       "description" : "",
       "properties" : {
         "_type" : "log",
@@ -88,7 +88,7 @@
     "routeId" : 2,
     "route" : [ {
       "name" : "timer",
-      "nodeId" : "58ccd504-ec67-4694-bfbd-b293a68a85f1",
+      "nodeId" : "640a0457-448b-425f-bf92-303b10fcb898",
       "description" : "",
       "properties" : {
         "_type" : "timer",
@@ -110,7 +110,7 @@
       "kameletPropertiesUrl" : "?timerName=timer&period=1000&repeatCount=0&delay=1000&fixedRate=false&daemon=true&setScheduleTime=false&time=2021-12-31 00:00:00"
     }, {
       "name" : "setBody",
-      "nodeId" : "4ba2fea8-0c8a-4e22-9b14-ade8c304f6bb",
+      "nodeId" : "d2c680d8-f478-4a7d-8472-a799799b2f7e",
       "description" : "",
       "properties" : {
         "_type" : "setBody",
@@ -128,7 +128,7 @@
       "kameletPropertiesUrl" : "?language=Simple&expression=exchangeId: ${exchangeId}&addNamespaces=false&suppressExceptions=false"
     }, {
       "name" : "log",
-      "nodeId" : "be8437b9-cdd8-4f26-b67e-96f487a029dd",
+      "nodeId" : "e4e6f1ac-3f54-4868-95e0-2cb3840e1f1c",
       "description" : "",
       "properties" : {
         "_type" : "log",
@@ -162,7 +162,29 @@
     "routeId" : 3,
     "route" : [ {
       "name" : "timer",
-      "nodeId" : "dba8470b-8826-44e4-b385-62e62f4e0649",
+      "nodeId" : "047974b3-ce63-4f1d-a4b3-99a35748df3e",
+      "description" : "",
+      "properties" : {
+        "_type" : "timer",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "daemon" : true,
+        "delay" : "1000",
+        "fixedRate" : false,
+        "name" : "timer",
+        "period" : "1000",
+        "repeatCount" : "0",
+        "setScheduleTime" : false,
+        "time" : "2021-12-31 00:00:00",
+        "timerName" : "timer",
+        "url" : ""
+      },
+      "_type" : "timer",
+      "kameletPropertiesUrl" : "?timerName=timer&period=1000&repeatCount=0&delay=1000&fixedRate=false&daemon=true&setScheduleTime=false&time=2021-12-31 00:00:00"
+    }, {
+      "name" : "timer",
+      "nodeId" : "35206201-5e16-411b-8a69-8d1ae8b74e61",
       "description" : "",
       "properties" : {
         "_type" : "timer",
@@ -189,7 +211,7 @@
   "name" : "FirstGitIntegration",
   "description" : "FirstGitIntegration",
   "createdAt" : "2023-09-18T14:37:05.998042148",
-  "updatedAt" : "2023-09-19T14:37:35.035261021",
+  "updatedAt" : "2023-10-04T20:21:36.282410673",
   "createdBy" : "a1e03be4-7ba1-462b-a7af-9848c607ead1",
-  "updatedBy" : "a1e03be4-7ba1-462b-a7af-9848c607ead1"
+  "updatedBy" : "123e4567-e89b-12d3-a456-426655440011"
 }
