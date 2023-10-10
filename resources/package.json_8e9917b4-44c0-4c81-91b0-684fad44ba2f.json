@@ -1,0 +1,17 @@
+{
+  "type" : "RESOURCE_FILE",
+  "properties" : {
+    "compression" : "false",
+    "content" : "Hello from text.txt",
+    "file" : "data:application/json;base64,ewogICJkZXBlbmRlbmNpZXMiOiB7CiAgICAicmVxdWVzdCI6ICJeMi44OC4yIiwKICAgICJzeW5jLXJlcXVlc3QiOiAiXjYuMS4wIgogIH0KfQo=",
+    "filename" : "package.json",
+    "type" : "File"
+  },
+  "id" : "8e9917b4-44c0-4c81-91b0-684fad44ba2f",
+  "name" : "package.json",
+  "description" : "package.json",
+  "createdAt" : "2023-10-10T20:18:47.85833563",
+  "updatedAt" : "2023-10-10T20:19:47.136064287",
+  "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "updatedBy" : "123e4567-e89b-12d3-a456-426655440011"
+}
