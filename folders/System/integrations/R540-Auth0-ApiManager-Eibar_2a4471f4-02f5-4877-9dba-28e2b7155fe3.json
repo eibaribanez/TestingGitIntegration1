@@ -1,0 +1,195 @@
+{
+  "revision" : 53,
+  "compression" : false,
+  "dataAnalyzer" : true,
+  "replicas" : 1,
+  "openApiUuid" : null,
+  "currentProfileUuid" : "2a2471f4-02f5-4877-9dba-28e2b7155fe3",
+  "parameterGroupUuids" : [ ],
+  "repoResourceUuids" : [ "ad376cc5-25af-49fd-9fd3-2dc7854b17d8", "a1057428-1531-40a8-a129-ed27382e947f", "3b5aa833-0eaa-4cb9-8ce8-ca97eac74110", "8e59aeb4-dd91-4729-8167-d064ba58dfd0", "71e48dda-80e9-4034-af48-cf39a9a10938", "1872a943-2a9b-4513-8739-06e95090b977", "17e7ca54-4247-4e9c-ba30-d078e3ac407a", "60b1161c-74ee-4cd8-96a1-0055c90271c1", "2ba48a26-1417-4e7c-b713-f5752001f1bb" ],
+  "routeDefinitions" : [ {
+    "id" : null,
+    "camelRouteId" : "route-2",
+    "enabled" : true,
+    "routeId" : 1,
+    "route" : [ {
+      "name" : "direct",
+      "nodeId" : "210940fe-bbed-464f-8b4e-58679e1bcb3f",
+      "description" : "getAuthToken",
+      "properties" : {
+        "_type" : "direct",
+        "advancedParameters" : [ ],
+        "camelGroup" : "core",
+        "endpointName" : "getAuthToken",
+        "name" : "direct",
+        "toDynamicEndpoint" : false,
+        "url" : ""
+      },
+      "_type" : "direct",
+      "kameletPropertiesUrl" : "?endpointName=getAuthToken"
+    }, {
+      "name" : "dslProcessor",
+      "nodeId" : "2c8a291f-bd80-4715-9207-06b26138cc85",
+      "description" : "API Get Token",
+      "properties" : {
+        "_type" : "dslProcessor",
+        "camelGroup" : "core",
+        "dsl" : ".bean(\"getAuth0Token\")",
+        "name" : "dslProcessor",
+        "url" : ""
+      },
+      "_type" : "dslProcessor",
+      "kameletPropertiesUrl" : "?dsl=.bean(\"getAuth0Token\")"
+    }, {
+      "name" : "log",
+      "nodeId" : "3c036a7c-29eb-44f4-83eb-17c4664ea321",
+      "description" : "",
+      "properties" : {
+        "_type" : "log",
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "level" : "INFO",
+        "logType" : "EIP",
+        "loggerName" : "log",
+        "message" : "${exchangeProperty.tokenTTL} ${exchangeProperty.mgmtToken}",
+        "multiline" : false,
+        "name" : "log",
+        "showAll" : false,
+        "showBody" : true,
+        "showBodyType" : true,
+        "showCaughtException" : false,
+        "showExchangeId" : false,
+        "showHeaders" : false,
+        "showProperties" : false,
+        "showStackTrace" : false,
+        "toDynamicEndpoint" : false,
+        "url" : ""
+      },
+      "_type" : "log",
+      "kameletPropertiesUrl" : "?level=INFO&logType=EIP&loggerName=log&message=${exchangeProperty.tokenTTL} ${exchangeProperty.mgmtToken}&multiline=false&showAll=false&showBody=true&showBodyType=true&showCaughtException=false&showExchangeId=false&showHeaders=false&showProperties=false&showStackTrace=false"
+    } ]
+  }, {
+    "id" : null,
+    "camelRouteId" : "route-2-7af14058",
+    "enabled" : true,
+    "routeId" : 2,
+    "route" : [ {
+      "name" : "direct",
+      "nodeId" : "4a74fcc8-66ff-4645-bc1c-099586c5e585",
+      "description" : "logger",
+      "properties" : {
+        "_type" : "direct",
+        "advancedParameters" : [ ],
+        "camelGroup" : "core",
+        "endpointName" : "logger",
+        "name" : "direct",
+        "toDynamicEndpoint" : false,
+        "url" : ""
+      },
+      "_type" : "direct",
+      "kameletPropertiesUrl" : "?endpointName=logger"
+    }, {
+      "name" : "log",
+      "nodeId" : "1b885e92-ebdb-4453-ac74-062a984d5369",
+      "description" : "",
+      "properties" : {
+        "_type" : "log",
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "level" : "INFO",
+        "logType" : "EIP",
+        "loggerName" : "log",
+        "message" : "${body}",
+        "multiline" : false,
+        "name" : "log",
+        "showAll" : false,
+        "showBody" : true,
+        "showBodyType" : true,
+        "showCaughtException" : false,
+        "showExchangeId" : false,
+        "showHeaders" : false,
+        "showProperties" : false,
+        "showStackTrace" : false,
+        "toDynamicEndpoint" : false,
+        "url" : ""
+      },
+      "_type" : "log",
+      "kameletPropertiesUrl" : "?level=INFO&logType=EIP&loggerName=log&message=${body}&multiline=false&showAll=false&showBody=true&showBodyType=true&showCaughtException=false&showExchangeId=false&showHeaders=false&showProperties=false&showStackTrace=false"
+    } ]
+  }, {
+    "id" : null,
+    "camelRouteId" : "route-3",
+    "enabled" : true,
+    "routeId" : 3,
+    "route" : [ {
+      "name" : "timer",
+      "nodeId" : "7080578e-f6ae-4af2-a0f4-1b9cca32cf5f",
+      "description" : "",
+      "properties" : {
+        "_type" : "timer",
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "daemon" : true,
+        "delay" : "1000",
+        "fixedRate" : false,
+        "name" : "timer",
+        "period" : "10000",
+        "repeatCount" : "0",
+        "setScheduleTime" : false,
+        "time" : "2021-12-31 00:00:00",
+        "timerName" : "timer",
+        "url" : ""
+      },
+      "_type" : "timer",
+      "kameletPropertiesUrl" : "?daemon=true&delay=1000&fixedRate=false&period=10000&repeatCount=0&setScheduleTime=false&time=2021-12-31 00:00:00&timerName=timer"
+    }, {
+      "name" : "dslProcessor",
+      "nodeId" : "cd43df99-d43b-4504-bba8-9da3e17d7a57",
+      "description" : "",
+      "properties" : {
+        "_type" : "dslProcessor",
+        "camelGroup" : "core",
+        "dsl" : ".bean(\"getAccessToken\")",
+        "name" : "dslProcessor",
+        "url" : ""
+      },
+      "_type" : "dslProcessor",
+      "kameletPropertiesUrl" : "?dsl=.bean(\"getAccessToken\")"
+    }, {
+      "name" : "log",
+      "nodeId" : "c49387b0-9251-4121-a058-bf5650cee60b",
+      "description" : "",
+      "properties" : {
+        "_type" : "log",
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "level" : "INFO",
+        "logType" : "EIP",
+        "loggerName" : "log",
+        "message" : "OK",
+        "multiline" : false,
+        "name" : "log",
+        "showAll" : false,
+        "showBody" : true,
+        "showBodyType" : true,
+        "showCaughtException" : false,
+        "showExchangeId" : false,
+        "showHeaders" : false,
+        "showProperties" : false,
+        "showStackTrace" : false,
+        "toDynamicEndpoint" : false,
+        "url" : ""
+      },
+      "_type" : "log",
+      "kameletPropertiesUrl" : "?level=INFO&logType=EIP&loggerName=log&message=OK&multiline=false&showAll=false&showBody=true&showBodyType=true&showCaughtException=false&showExchangeId=false&showHeaders=false&showProperties=false&showStackTrace=false"
+    } ]
+  } ],
+  "traits" : [ ],
+  "id" : "2a4471f4-02f5-4877-9dba-28e2b7155fe3",
+  "name" : "R540-Auth0-ApiManager-Eibar",
+  "description" : "Interface for communicating with Auth0 management API",
+  "createdAt" : "2023-10-10T14:00:21.385337852",
+  "updatedAt" : "2023-10-10T14:00:21.385339153",
+  "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "updatedBy" : "123e4567-e89b-12d3-a456-426655440011"
+}

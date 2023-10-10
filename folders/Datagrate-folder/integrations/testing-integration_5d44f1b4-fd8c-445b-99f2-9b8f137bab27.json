@@ -1,0 +1,90 @@
+{
+  "revision" : 20,
+  "compression" : false,
+  "dataAnalyzer" : true,
+  "replicas" : 1,
+  "openApiUuid" : null,
+  "currentProfileUuid" : "123e4567-e89b-12d3-a456-426655440031",
+  "parameterGroupUuids" : [ ],
+  "repoResourceUuids" : [ ],
+  "routeDefinitions" : [ {
+    "id" : null,
+    "camelRouteId" : "route-1",
+    "enabled" : true,
+    "routeId" : 1,
+    "route" : [ {
+      "name" : "timer",
+      "nodeId" : "ccae8c7e-07a0-439c-8b12-d87a093bdeac",
+      "description" : "",
+      "properties" : {
+        "_type" : "timer",
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "daemon" : true,
+        "delay" : "1000",
+        "fixedRate" : false,
+        "name" : "timer",
+        "period" : "1000",
+        "repeatCount" : "0",
+        "setScheduleTime" : false,
+        "time" : "2021-12-31 00:00:00",
+        "timerName" : "timer",
+        "url" : ""
+      },
+      "_type" : "timer",
+      "kameletPropertiesUrl" : "?daemon=true&delay=1000&fixedRate=false&period=1000&repeatCount=0&setScheduleTime=false&time=2021-12-31 00:00:00&timerName=timer"
+    }, {
+      "name" : "setBody",
+      "nodeId" : "1c416aca-6129-4a0e-9955-c1ac95bc7dd6",
+      "description" : "",
+      "properties" : {
+        "_type" : "setBody",
+        "addNamespaces" : false,
+        "camelGroup" : "core",
+        "expression" : "exchangeId: ${exchangeId}",
+        "language" : "Simple",
+        "name" : "setBody",
+        "namespaces" : [ ],
+        "suppressExceptions" : false,
+        "url" : ""
+      },
+      "_type" : "setBody",
+      "kameletPropertiesUrl" : "?addNamespaces=false&expression=exchangeId: ${exchangeId}&language=Simple&suppressExceptions=false"
+    }, {
+      "name" : "log",
+      "nodeId" : "321d5664-2815-4434-bc0b-c72b65f288da",
+      "description" : "",
+      "properties" : {
+        "_type" : "log",
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "level" : "INFO",
+        "logType" : "EIP",
+        "loggerName" : "log",
+        "message" : "headers: ${headers}; body: ${body}",
+        "multiline" : false,
+        "name" : "log",
+        "showAll" : false,
+        "showBody" : true,
+        "showBodyType" : true,
+        "showCaughtException" : false,
+        "showExchangeId" : false,
+        "showHeaders" : false,
+        "showProperties" : false,
+        "showStackTrace" : false,
+        "toDynamicEndpoint" : false,
+        "url" : ""
+      },
+      "_type" : "log",
+      "kameletPropertiesUrl" : "?level=INFO&logType=EIP&loggerName=log&message=headers: ${headers}; body: ${body}&multiline=false&showAll=false&showBody=true&showBodyType=true&showCaughtException=false&showExchangeId=false&showHeaders=false&showProperties=false&showStackTrace=false"
+    } ]
+  } ],
+  "traits" : [ ],
+  "id" : "5d44f1b4-fd8c-445b-99f2-9b8f137bab27",
+  "name" : "testing-integration",
+  "description" : "User Invite Test",
+  "createdAt" : "2023-10-10T14:00:21.110954348",
+  "updatedAt" : "2023-10-10T14:00:21.110955464",
+  "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "updatedBy" : "123e4567-e89b-12d3-a456-426655440011"
+}

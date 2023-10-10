@@ -1,0 +1,55 @@
+{
+  "atlasJson" : {
+    "jsonType" : "io.atlasmap.v2.AtlasMapping",
+    "dataSource" : [ {
+      "jsonType" : "io.atlasmap.json.v2.JsonDataSource",
+      "id" : "sample_source-0a71ddc0-27e9-4498-93d3-a1527ccd9c4e",
+      "name" : "sample_source",
+      "description" : "Source document sample_source type: JSON",
+      "uri" : "atlas:json:sample_source-0a71ddc0-27e9-4498-93d3-a1527ccd9c4e",
+      "dataSourceType" : "SOURCE",
+      "template" : null
+    }, {
+      "jsonType" : "io.atlasmap.xml.v2.XmlDataSource",
+      "id" : "salesforceOportunity-7318e530-b26d-43f9-bc2a-d8fea82ad313",
+      "name" : "salesforceOportunity",
+      "description" : "Source document salesforceOportunity type: XML",
+      "uri" : "atlas:xml:salesforceOportunity-7318e530-b26d-43f9-bc2a-d8fea82ad313",
+      "dataSourceType" : "SOURCE",
+      "xmlNamespaces" : {
+        "xmlNamespace" : [ ]
+      },
+      "template" : null
+    }, {
+      "jsonType" : "io.atlasmap.json.v2.JsonDataSource",
+      "id" : "package-5a2bb93f-1845-46ca-a666-645c45e5ef7c",
+      "name" : "package",
+      "description" : "Source document package type: JSON",
+      "uri" : "atlas:json:package-5a2bb93f-1845-46ca-a666-645c45e5ef7c",
+      "dataSourceType" : "SOURCE",
+      "template" : null
+    } ],
+    "mappings" : {
+      "mapping" : [ ]
+    },
+    "lookupTables" : {
+      "lookupTable" : [ ]
+    },
+    "constants" : {
+      "constant" : [ ]
+    },
+    "properties" : {
+      "property" : [ ]
+    },
+    "name" : "UI.0"
+  },
+  "atlasGzBase64" : "H4sIAAAAAAAAA81WUW/aMBB+76+w/IwZJAFC1K5qu05atdJpUKlS003GMVVGYmexqYqq/Pedk5Am0FLKHjYkhHz33eXu890XEEJPBwghzB8TmepLmiShuFfYM8bCZT74gUYLjj2En3x8oiOqSqSPPbD8UlJMlgmHk49D2aYGEdOk/WC1m+iWjwOq6VguUmbgt9uijcOkuIDfT7UoSBIGOVrROIn4T5U7SIcOukHAOsQa8CFxnKFLhnZgE9rtWQPGgiFzimhBY74ZX1THFUvDRIdS5IjimSiQbBFzoVEjAmko20MX46tRHrxIwzwo78Az5Xt7VvhMUsXM+Or6+9m5j7PWNs4e48hQdhNHrzEWcTWTYL0yF74QoV6Sgd11ec/ukKnVD4hjz4ZkyixKAnfGqWvRwO7a68RtptmRv83Aksaby68vsAgNeX9X9BYuwQv5R9CVSijjqhjnusnM6F22nfO35xQyzek9Jz1qTadDe0a6rtMjTp9RQvv9Puk7Peb0eI/PBqxJdBm5E7cldoepfHc92+bxDvxxKRwFgXElDsAdeCMp54tkQqfRiuKapUIxKZSmQpeQ1bHyJ6lMeKrDVY7yvKwAFWnXX9odKCzDuX5lrbrCcU1Bx24PVtJWaZzBmAxG5Rpbi1t1SJMJAzZENzFhsJFkp9VfyyJUwpm57dWTvozGk5PR2flruG80hQY0T0HA0RPGHsZZE6qK0k0ynYKir5wAe4OQzQ18ixfY55dp2XOZ/192ynXad1Des43/kAT43q2g5TadRpLNjeQ1VmqNJtT8/yCMwcezMFV6lG8s8uB8IXORK72gVHXnaRhwUXOLkM3Fs3sccZ4sUTNFrpoeGriVBbqO84iuLzJcq7B2v9tqPzyGNwN6AO6AyCMfd43KIC6YDEDtwHA9+UxcMBndCmgkBQejkD4+/uiLQwY8RfIeQRKhjowuC09SFSrPtKI8zTxQcdgGL0fkb74yxscfIMMeJed0mzdHwgVQyArxRNUtpPz3giujsXD4YbVdt23VOFRLwUgT02/nbRtEBjSuVWVmxJyzgz8/MQwmWgoAAA==",
+  "atlasZipBase64" : null,
+  "id" : "69",
+  "name" : "aaa",
+  "description" : "aaa",
+  "createdAt" : "2023-10-10T14:00:21.814595421",
+  "updatedAt" : "2023-10-10T14:00:21.814596396",
+  "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "updatedBy" : "123e4567-e89b-12d3-a456-426655440011"
+}

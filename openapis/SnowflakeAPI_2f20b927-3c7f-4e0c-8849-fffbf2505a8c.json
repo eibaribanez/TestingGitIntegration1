@@ -1,0 +1,32 @@
+{
+  "version" : "demo.dev.jetic.io",
+  "host" : "1.0",
+  "id" : "2f20b927-3c7f-4e0c-8849-fffbf2505a8c",
+  "name" : "SnowflakeAPI",
+  "description" : null,
+  "createdAt" : "2023-10-10T14:00:20.475603155",
+  "updatedAt" : "2023-10-10T14:00:20.475603558",
+  "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "updatedBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "endpoints" : [ {
+    "uuid" : "9fe99666-8ffc-4a73-8d35-b90d9f891413",
+    "name" : "GetUsers",
+    "path" : "/getUsers",
+    "pathVariables" : [ ],
+    "operations" : [ {
+      "uuid" : "bcd4594e-2948-4945-a80b-e58150b7ed63",
+      "operationId" : "getOneUser",
+      "method" : "get",
+      "consumes" : "application/json",
+      "produces" : "application/json"
+    }, {
+      "uuid" : "a4dbf0ce-547b-40e8-8b61-f6119e3575e5",
+      "operationId" : "createNew",
+      "method" : "post",
+      "consumes" : "application/json",
+      "produces" : "application/json"
+    } ]
+  } ],
+  "imported" : false,
+  "specification" : "{\"openapi\":\"3.0.2\",\"info\":{\"title\":\"SnowflakeAPI\",\"version\":\"1.0\"},\"servers\":[{\"url\":\"/\"}],\"paths\":{\"/getUsers\":{\"get\":{\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"type\":\"string\"}}},\"description\":\"default response description\"}},\"operationId\":\"getOneUser\"},\"post\":{\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"type\":\"string\"}}},\"description\":\"default response description\"}},\"operationId\":\"createNew\"}}},\"components\":{}}"
+}

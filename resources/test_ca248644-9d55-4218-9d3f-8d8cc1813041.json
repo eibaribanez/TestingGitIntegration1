@@ -1,0 +1,11 @@
+{
+  "type" : "MAVEN_DEPENDENCY",
+  "properties" : { },
+  "id" : "ca248644-9d55-4218-9d3f-8d8cc1813041",
+  "name" : "test",
+  "description" : "",
+  "createdAt" : "2023-10-10T14:00:20.721722096",
+  "updatedAt" : "2023-10-10T14:00:20.721723474",
+  "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "updatedBy" : "123e4567-e89b-12d3-a456-426655440011"
+}

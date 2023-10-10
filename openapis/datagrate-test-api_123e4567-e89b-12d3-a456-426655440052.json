@@ -1,0 +1,50 @@
+{
+  "version" : "test.dev.jetic.io",
+  "host" : "0.0.1",
+  "id" : "123e4567-e89b-12d3-a456-426655440052",
+  "name" : "datagrate-test-api",
+  "description" : null,
+  "createdAt" : "2023-10-10T14:00:20.462921616",
+  "updatedAt" : "2023-10-10T14:00:20.462925864",
+  "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "updatedBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "endpoints" : [ {
+    "uuid" : "e31b79e3-4896-4fcb-b773-e496919b871b",
+    "name" : "undefined",
+    "path" : "/",
+    "pathVariables" : [ ],
+    "operations" : [ {
+      "uuid" : "c55fcd70-e64a-4009-8c59-f8b468866965",
+      "operationId" : "default",
+      "method" : "get",
+      "consumes" : "application/json",
+      "produces" : "application/json"
+    } ]
+  }, {
+    "uuid" : "e65fa316-061f-442f-a93f-98f5643b3592",
+    "name" : "Test",
+    "path" : "/test",
+    "pathVariables" : [ ],
+    "operations" : [ {
+      "uuid" : "af3600c9-027f-4f7a-a6d8-f0a3749be4fc",
+      "operationId" : "test123",
+      "method" : "get",
+      "consumes" : "application/json",
+      "produces" : "application/json"
+    } ]
+  }, {
+    "uuid" : "8be44631-4898-4c0e-bc43-3933c237edab",
+    "name" : "Update",
+    "path" : "/update",
+    "pathVariables" : [ ],
+    "operations" : [ {
+      "uuid" : "0d172c48-593f-46b9-82a2-ef52da7a992c",
+      "operationId" : "account",
+      "method" : "post",
+      "consumes" : "application/json",
+      "produces" : "application/json"
+    } ]
+  } ],
+  "imported" : false,
+  "specification" : "{\"openapi\":\"3.0.2\",\"info\":{\"title\":\"datagrate-test-api\",\"version\":\"0.0.1\"},\"servers\":[{\"url\":\"/\"}],\"paths\":{\"/\":{\"get\":{\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"type\":\"string\"}}},\"description\":\"default response description\"}},\"operationId\":\"default\"}},\"/test\":{\"get\":{\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"type\":\"string\"}}},\"description\":\"default response description\"}},\"operationId\":\"test123\"}},\"/update\":{\"post\":{\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"type\":\"string\"}}},\"description\":\"default response description\"}},\"operationId\":\"account\"}}},\"components\":{}}"
+}

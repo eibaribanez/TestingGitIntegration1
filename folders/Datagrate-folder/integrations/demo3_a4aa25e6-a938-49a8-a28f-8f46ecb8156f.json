@@ -1,0 +1,173 @@
+{
+  "revision" : 13,
+  "compression" : false,
+  "dataAnalyzer" : true,
+  "replicas" : 1,
+  "openApiUuid" : "a118d932-d9c1-41ae-b79a-2984f13b8794",
+  "currentProfileUuid" : "123e4567-e89b-12d3-a456-426655440031",
+  "parameterGroupUuids" : [ ],
+  "repoResourceUuids" : [ "501697a6-4a81-4416-96df-8d082a60a7f6" ],
+  "routeDefinitions" : [ {
+    "id" : null,
+    "camelRouteId" : "route-1",
+    "enabled" : true,
+    "routeId" : 1,
+    "route" : [ {
+      "name" : "timer",
+      "nodeId" : "13724200-6923-408c-90c7-4d4bfbdfdc5d",
+      "description" : "",
+      "properties" : {
+        "_type" : "timer",
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "daemon" : true,
+        "delay" : "1000",
+        "fixedRate" : false,
+        "name" : "timer",
+        "period" : "1000",
+        "repeatCount" : "0",
+        "setScheduleTime" : false,
+        "time" : "2021-12-31 00:00:00",
+        "timerName" : "timer",
+        "url" : ""
+      },
+      "_type" : "timer",
+      "kameletPropertiesUrl" : "?daemon=true&delay=1000&fixedRate=false&period=1000&repeatCount=0&setScheduleTime=false&time=2021-12-31 00:00:00&timerName=timer"
+    }, {
+      "name" : "setBody",
+      "nodeId" : "3b3de9f5-5a09-4f5a-afdd-50031ffcef56",
+      "description" : "",
+      "properties" : {
+        "_type" : "setBody",
+        "addNamespaces" : false,
+        "camelGroup" : "core",
+        "expression" : "Hello world 123",
+        "language" : "Simple",
+        "name" : "setBody",
+        "namespaces" : [ ],
+        "suppressExceptions" : false,
+        "url" : ""
+      },
+      "_type" : "setBody",
+      "kameletPropertiesUrl" : "?addNamespaces=false&expression=Hello world 123&language=Simple&suppressExceptions=false"
+    }, {
+      "name" : "log",
+      "nodeId" : "902ae7b9-c5ea-4eb7-846f-a777a734acc2",
+      "description" : "",
+      "properties" : {
+        "_type" : "log",
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "level" : "INFO",
+        "logType" : "EIP",
+        "loggerName" : "log",
+        "message" : "headers: ${headers}; body: ${body}",
+        "multiline" : false,
+        "name" : "log",
+        "showAll" : false,
+        "showBody" : true,
+        "showBodyType" : true,
+        "showCaughtException" : false,
+        "showExchangeId" : false,
+        "showHeaders" : false,
+        "showProperties" : false,
+        "showStackTrace" : false,
+        "toDynamicEndpoint" : false,
+        "url" : ""
+      },
+      "_type" : "log",
+      "kameletPropertiesUrl" : "?level=INFO&logType=EIP&loggerName=log&message=headers: ${headers}; body: ${body}&multiline=false&showAll=false&showBody=true&showBodyType=true&showCaughtException=false&showExchangeId=false&showHeaders=false&showProperties=false&showStackTrace=false"
+    } ]
+  }, {
+    "id" : null,
+    "camelRouteId" : "route-2",
+    "enabled" : true,
+    "routeId" : 2,
+    "route" : [ {
+      "name" : "getRequest",
+      "nodeId" : "94ae4ebb-72fa-4b60-b38d-3dab889889e3",
+      "description" : "",
+      "properties" : {
+        "_type" : "restApi",
+        "camelGroup" : "rest",
+        "consumes" : "application/json",
+        "endpoint" : "/",
+        "method" : "get",
+        "name" : "getRequest",
+        "operationName" : "Get",
+        "produces" : "application/json",
+        "requestmethod" : "GET",
+        "url" : ""
+      },
+      "_type" : "restApi",
+      "kameletPropertiesUrl" : "?consumes=application/json&endpoint=/&method=get&operationName=Get&produces=application/json&requestmethod=GET"
+    }, {
+      "name" : "process",
+      "nodeId" : "12fc966e-d34a-4fed-9f0f-0916a6a969ac",
+      "description" : "",
+      "properties" : {
+        "_type" : "process",
+        "camelGroup" : "transform",
+        "code" : "/*\n * Provide own codes to consume or translate the message exchanges.\n * @param Exchange exchange\n * exchange.getIn().setHeader(\"date\", new Date())\n */",
+        "import" : "// import org.apache.camel.Message",
+        "name" : "process",
+        "url" : ""
+      },
+      "_type" : "process",
+      "kameletPropertiesUrl" : "?code=/*\n * Provide own codes to consume or translate the message exchanges.\n * @param Exchange exchange\n * exchange.getIn().setHeader(\"date\", new Date())\n */&import=// import org.apache.camel.Message"
+    }, {
+      "name" : "dslProcessor",
+      "nodeId" : "af1fdb86-181e-4cda-88bd-8632393bd56f",
+      "description" : "",
+      "properties" : {
+        "_type" : "dslProcessor",
+        "camelGroup" : "core",
+        "dsl" : "from('direct://dsl-processor')",
+        "name" : "dslProcessor",
+        "url" : ""
+      },
+      "_type" : "dslProcessor",
+      "kameletPropertiesUrl" : "?dsl=from('direct://dsl-processor')"
+    } ]
+  }, {
+    "id" : null,
+    "camelRouteId" : "route-3",
+    "enabled" : true,
+    "routeId" : 3,
+    "route" : [ {
+      "name" : "errorHandler",
+      "nodeId" : "6c4a8ff3-fa2c-438c-b25a-b8cd79e4260f",
+      "description" : "",
+      "properties" : {
+        "_type" : "errorHandler",
+        "asyncDelayedRedelivery" : false,
+        "camelGroup" : "exception",
+        "deadLetterUri" : "log://dead",
+        "level" : "INFO",
+        "loggerLevel" : "INFO",
+        "loggerName" : "error",
+        "maximumRedeliveries" : "2",
+        "name" : "errorHandler",
+        "redeliveryDelay" : "1000",
+        "setLoggerLevel" : false,
+        "setLoggerName" : false,
+        "setMaximumRedeliveries" : false,
+        "setRedeliveryDelay" : false,
+        "setRetryAttemptedLogLevel" : false,
+        "type" : "Default Handler",
+        "url" : "",
+        "useOriginalMessage" : false
+      },
+      "_type" : "errorHandler",
+      "kameletPropertiesUrl" : "?asyncDelayedRedelivery=false&deadLetterUri=log://dead&level=INFO&loggerLevel=INFO&loggerName=error&maximumRedeliveries=2&redeliveryDelay=1000&setLoggerLevel=false&setLoggerName=false&setMaximumRedeliveries=false&setRedeliveryDelay=false&setRetryAttemptedLogLevel=false&type=Default Handler&useOriginalMessage=false"
+    } ]
+  } ],
+  "traits" : [ ],
+  "id" : "a4aa25e6-a938-49a8-a28f-8f46ecb8156f",
+  "name" : "demo3",
+  "description" : "",
+  "createdAt" : "2023-10-10T14:00:21.368765837",
+  "updatedAt" : "2023-10-10T14:00:21.368766868",
+  "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "updatedBy" : "123e4567-e89b-12d3-a456-426655440011"
+}

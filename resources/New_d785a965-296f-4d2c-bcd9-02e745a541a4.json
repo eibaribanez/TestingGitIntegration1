@@ -1,0 +1,11 @@
+{
+  "type" : "DATASET_RESOURCE",
+  "properties" : { },
+  "id" : "d785a965-296f-4d2c-bcd9-02e745a541a4",
+  "name" : "New",
+  "description" : "New",
+  "createdAt" : "2023-10-10T14:00:20.652921887",
+  "updatedAt" : "2023-10-10T14:00:20.652922898",
+  "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "updatedBy" : "123e4567-e89b-12d3-a456-426655440011"
+}

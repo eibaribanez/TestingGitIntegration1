@@ -1,0 +1,202 @@
+{
+  "revision" : 49,
+  "compression" : false,
+  "dataAnalyzer" : true,
+  "replicas" : 1,
+  "openApiUuid" : "2f20b927-3c7f-4e0c-8849-fffbf2505a8c",
+  "currentProfileUuid" : "123e4567-e89b-12d3-a456-426655440031",
+  "parameterGroupUuids" : [ ],
+  "repoResourceUuids" : [ "2e49dcd7-f16c-4aa6-a813-0ba0d8616fcb" ],
+  "routeDefinitions" : [ {
+    "id" : null,
+    "camelRouteId" : "route-1",
+    "enabled" : true,
+    "routeId" : 1,
+    "route" : [ {
+      "name" : "getRequest",
+      "nodeId" : "restApi-1",
+      "description" : "",
+      "properties" : {
+        "_type" : "restApi",
+        "camelGroup" : "rest",
+        "consumes" : "application/json",
+        "endpoint" : "/getUsers",
+        "method" : "get",
+        "name" : "getRequest",
+        "operationName" : "getOneUser",
+        "produces" : "application/json",
+        "requestmethod" : "GET",
+        "url" : ""
+      },
+      "_type" : "restApi",
+      "kameletPropertiesUrl" : "?consumes=application/json&endpoint=/getUsers&method=get&operationName=getOneUser&produces=application/json&requestmethod=GET"
+    }, {
+      "name" : "log",
+      "nodeId" : "log-1",
+      "description" : "",
+      "properties" : {
+        "_type" : "log",
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "level" : "INFO",
+        "logType" : "EIP",
+        "loggerName" : "log",
+        "message" : "headers: ${headers}; body: ${body}",
+        "multiline" : false,
+        "name" : "log",
+        "showAll" : false,
+        "showBody" : true,
+        "showBodyType" : true,
+        "showCaughtException" : false,
+        "showExchangeId" : false,
+        "showHeaders" : false,
+        "showProperties" : false,
+        "showStackTrace" : false,
+        "toDynamicEndpoint" : false,
+        "url" : ""
+      },
+      "_type" : "log",
+      "kameletPropertiesUrl" : "?level=INFO&logType=EIP&loggerName=log&message=headers: ${headers}; body: ${body}&multiline=false&showAll=false&showBody=true&showBodyType=true&showCaughtException=false&showExchangeId=false&showHeaders=false&showProperties=false&showStackTrace=false"
+    }, {
+      "name" : "snowflake",
+      "nodeId" : "snowflake-1",
+      "description" : "",
+      "properties" : {
+        "_type" : "snowflake",
+        "camelGroup" : "component",
+        "dataSource" : "#snowflake",
+        "name" : "snowflake",
+        "query" : "SELECT * FROM users LIMIT 10",
+        "toDynamicEndpoint" : false,
+        "url" : ""
+      },
+      "_type" : "snowflake",
+      "kameletPropertiesUrl" : "?dataSource=#snowflake&query=SELECT * FROM users LIMIT 10"
+    }, {
+      "name" : "convertBodyTo",
+      "nodeId" : "convertBodyTo-1",
+      "description" : "",
+      "properties" : {
+        "_type" : "convertBodyTo",
+        "camelGroup" : "transform",
+        "name" : "convertBodyTo",
+        "targetClass" : "String.class",
+        "url" : ""
+      },
+      "_type" : "convertBodyTo",
+      "kameletPropertiesUrl" : "?targetClass=String.class"
+    } ]
+  }, {
+    "id" : null,
+    "camelRouteId" : "route-2",
+    "enabled" : true,
+    "routeId" : 2,
+    "route" : [ {
+      "name" : "postRequest",
+      "nodeId" : "restApi-2",
+      "description" : "",
+      "properties" : {
+        "_type" : "restApi",
+        "camelGroup" : "rest",
+        "consumes" : "application/json",
+        "endpoint" : "/getUsers",
+        "method" : "post",
+        "name" : "postRequest",
+        "operationName" : "createNew",
+        "produces" : "application/json",
+        "requestmethod" : "POST",
+        "url" : ""
+      },
+      "_type" : "restApi",
+      "kameletPropertiesUrl" : "?consumes=application/json&endpoint=/getUsers&method=post&operationName=createNew&produces=application/json&requestmethod=POST"
+    }, {
+      "name" : "log",
+      "nodeId" : "log-2",
+      "description" : "",
+      "properties" : {
+        "_type" : "log",
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "level" : "INFO",
+        "logType" : "EIP",
+        "loggerName" : "log",
+        "message" : "headers: ${headers}; body: ${body}",
+        "multiline" : false,
+        "name" : "log",
+        "showAll" : false,
+        "showBody" : true,
+        "showBodyType" : true,
+        "showCaughtException" : false,
+        "showExchangeId" : false,
+        "showHeaders" : false,
+        "showProperties" : false,
+        "showStackTrace" : false,
+        "toDynamicEndpoint" : false,
+        "url" : ""
+      },
+      "_type" : "log",
+      "kameletPropertiesUrl" : "?level=INFO&logType=EIP&loggerName=log&message=headers: ${headers}; body: ${body}&multiline=false&showAll=false&showBody=true&showBodyType=true&showCaughtException=false&showExchangeId=false&showHeaders=false&showProperties=false&showStackTrace=false"
+    }, {
+      "name" : "setHeaders",
+      "nodeId" : "setHeaders-1",
+      "description" : "",
+      "properties" : {
+        "_type" : "setHeaders",
+        "addNamespaces" : false,
+        "camelGroup" : "core",
+        "headerList" : [ {
+          "headerName" : "name",
+          "headerValue" : "$.name",
+          "language" : "JsonPath",
+          "uuid" : "0fca4bca-e8f6-434f-aa83-337b983ec02d"
+        }, {
+          "headerName" : "state",
+          "headerValue" : "$.state",
+          "language" : "JsonPath",
+          "uuid" : "41a6b3ab-1432-4eb3-81b3-b9dddf5828f5"
+        } ],
+        "name" : "setHeaders",
+        "namespaces" : [ ],
+        "url" : ""
+      },
+      "_type" : "setHeaders",
+      "kameletPropertiesUrl" : "?addNamespaces=false"
+    }, {
+      "name" : "snowflake",
+      "nodeId" : "snowflake-2",
+      "description" : "",
+      "properties" : {
+        "_type" : "snowflake",
+        "camelGroup" : "component",
+        "dataSource" : "#snowflake",
+        "name" : "snowflake",
+        "query" : "Insert into users (name, state) values (:#${header.name}, :#${header.state})",
+        "toDynamicEndpoint" : false,
+        "url" : ""
+      },
+      "_type" : "snowflake",
+      "kameletPropertiesUrl" : "?dataSource=#snowflake&query=Insert into users (name, state) values (:#${header.name}, :#${header.state})"
+    }, {
+      "name" : "convertBodyTo",
+      "nodeId" : "convertBodyTo-2",
+      "description" : "",
+      "properties" : {
+        "_type" : "convertBodyTo",
+        "camelGroup" : "transform",
+        "name" : "convertBodyTo",
+        "targetClass" : "String.class",
+        "url" : ""
+      },
+      "_type" : "convertBodyTo",
+      "kameletPropertiesUrl" : "?targetClass=String.class"
+    } ]
+  } ],
+  "traits" : [ ],
+  "id" : "8b937d7f-c1e6-4e06-b111-614f991b7af5",
+  "name" : "Snowflake-API",
+  "description" : "",
+  "createdAt" : "2023-10-10T14:00:21.074331517",
+  "updatedAt" : "2023-10-10T14:00:21.074332538",
+  "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "updatedBy" : "123e4567-e89b-12d3-a456-426655440011"
+}

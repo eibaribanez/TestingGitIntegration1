@@ -1,0 +1,238 @@
+{
+  "revision" : 39,
+  "compression" : false,
+  "dataAnalyzer" : true,
+  "replicas" : 1,
+  "openApiUuid" : null,
+  "currentProfileUuid" : "123e4567-e89b-12d3-a456-426655440031",
+  "parameterGroupUuids" : [ ],
+  "repoResourceUuids" : [ "24c811f4-f9e4-4204-8e4f-449e7f822b12" ],
+  "routeDefinitions" : [ {
+    "id" : null,
+    "camelRouteId" : "route-1",
+    "enabled" : true,
+    "routeId" : 1,
+    "route" : [ {
+      "name" : "timer",
+      "nodeId" : "930f3e5a-dad1-4f1e-9c73-8a650068d8ab",
+      "description" : "",
+      "properties" : {
+        "_type" : "timer",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "daemon" : true,
+        "delay" : "1000",
+        "fixedRate" : false,
+        "name" : "timer",
+        "period" : "1000",
+        "repeatCount" : "1",
+        "setScheduleTime" : false,
+        "time" : "2021-12-31 00:00:00",
+        "timerName" : "timer",
+        "url" : ""
+      },
+      "_type" : "timer",
+      "kameletPropertiesUrl" : "?daemon=true&delay=1000&fixedRate=false&period=1000&repeatCount=1&setScheduleTime=false&time=2021-12-31 00:00:00&timerName=timer"
+    }, {
+      "name" : "setBody",
+      "nodeId" : "9c97c0e6-2020-4ffc-809a-cc43e110a25c",
+      "description" : "",
+      "properties" : {
+        "_type" : "setBody",
+        "active" : true,
+        "addNamespaces" : false,
+        "camelGroup" : "core",
+        "expression" : "facilityIds[]=61463&facilityIds[]=61464&facilityIds[]=61465&facilityIds[]=61466&facilityIds[]=61467&facilityIds[]=61468&facilityIds[]=61469&facilityIds[]=61470&facilityIds[]=61471&facilityIds[]=61472&facilityIds[]=61473&facilityIds[]=61474&facilityIds[]=61476&facilityIds[]=61496&facilityIds[]=61497&facilityIds[]=61498&facilityIds[]=61500&facilityIds[]=61501&facilityIds[]=61502&facilityIds[]=61503&facilityIds[]=61504&facilityIds[]=61508&facilityIds[]=61513&facilityIds[]=61517&facilityIds[]=61525&facilityIds[]=61527&facilityIds[]=61528&facilityIds[]=61529&facilityIds[]=61530&facilityIds[]=61534&facilityIds[]=61539&facilityIds[]=61546&facilityIds[]=61547&facilityIds[]=61548&facilityIds[]=61550&facilityIds[]=61555&facilityIds[]=61557&facilityIds[]=61558&facilityIds[]=61559&facilityIds[]=61561&facilityIds[]=61563&facilityIds[]=61565&facilityIds[]=61567&facilityIds[]=61568&facilityIds[]=61571&facilityIds[]=61573&facilityIds[]=61574&facilityIds[]=61575&facilityIds[]=61576&facilityIds[]=61577&facilityIds[]=61581&facilityIds[]=61582&facilityIds[]=61584&facilityIds[]=61585&facilityIds[]=61586&facilityIds[]=61587&facilityIds[]=61588&facilityIds[]=61589&facilityIds[]=61591&facilityIds[]=61592&facilityIds[]=61596&facilityIds[]=61600&facilityIds[]=61602&facilityIds[]=61603&facilityIds[]=61604&facilityIds[]=61605&facilityIds[]=61606&facilityIds[]=61608&facilityIds[]=61609&facilityIds[]=61610&facilityIds[]=61611&facilityIds[]=61612&facilityIds[]=61615&facilityIds[]=61616&facilityIds[]=61617&facilityIds[]=61618&facilityIds[]=61624&facilityIds[]=61625&facilityIds[]=61626&facilityIds[]=61628&facilityIds[]=61629&facilityIds[]=61630&facilityIds[]=61631&facilityIds[]=61632&facilityIds[]=61633&facilityIds[]=61634&facilityIds[]=61635&facilityIds[]=61637&facilityIds[]=61638&facilityIds[]=61639&facilityIds[]=61640&facilityIds[]=61641&facilityIds[]=62955&facilityIds[]=62958&facilityIds[]=62959&facilityIds[]=62961&facilityIds[]=62962&facilityIds[]=62963&facilityIds[]=62967&facilityIds[]=62968&facilityIds[]=62969&facilityIds[]=62970&facilityIds[]=62972&facilityIds[]=62973&facilityIds[]=62975&facilityIds[]=62976&facilityIds[]=62978&facilityIds[]=62979&facilityIds[]=62980&facilityIds[]=62981&facilityIds[]=62982&facilityIds[]=62994&facilityIds[]=62995&facilityIds[]=62996&facilityIds[]=62997&facilityIds[]=62998&facilityIds[]=62999&facilityIds[]=63000&facilityIds[]=63001&facilityIds[]=63002&facilityIds[]=63003&facilityIds[]=63004&facilityIds[]=63005&facilityIds[]=63007&facilityIds[]=63008&facilityIds[]=63010&facilityIds[]=63016&facilityIds[]=63017&facilityIds[]=63018&facilityIds[]=63020&facilityIds[]=63024&facilityIds[]=63025&facilityIds[]=63026&facilityIds[]=63027&facilityIds[]=63028&facilityIds[]=63030&facilityIds[]=63032&facilityIds[]=63033&facilityIds[]=75443&from=2023-01-24&to=2023-05-15&startTime=&endTime=&fromTime=&toTime=&duration=0",
+        "language" : "Constant",
+        "name" : "setBody",
+        "namespaces" : [ ],
+        "suppressExceptions" : false,
+        "url" : ""
+      },
+      "_type" : "setBody",
+      "kameletPropertiesUrl" : "?addNamespaces=false&expression=facilityIds[]=61463&facilityIds[]=61464&facilityIds[]=61465&facilityIds[]=61466&facilityIds[]=61467&facilityIds[]=61468&facilityIds[]=61469&facilityIds[]=61470&facilityIds[]=61471&facilityIds[]=61472&facilityIds[]=61473&facilityIds[]=61474&facilityIds[]=61476&facilityIds[]=61496&facilityIds[]=61497&facilityIds[]=61498&facilityIds[]=61500&facilityIds[]=61501&facilityIds[]=61502&facilityIds[]=61503&facilityIds[]=61504&facilityIds[]=61508&facilityIds[]=61513&facilityIds[]=61517&facilityIds[]=61525&facilityIds[]=61527&facilityIds[]=61528&facilityIds[]=61529&facilityIds[]=61530&facilityIds[]=61534&facilityIds[]=61539&facilityIds[]=61546&facilityIds[]=61547&facilityIds[]=61548&facilityIds[]=61550&facilityIds[]=61555&facilityIds[]=61557&facilityIds[]=61558&facilityIds[]=61559&facilityIds[]=61561&facilityIds[]=61563&facilityIds[]=61565&facilityIds[]=61567&facilityIds[]=61568&facilityIds[]=61571&facilityIds[]=61573&facilityIds[]=61574&facilityIds[]=61575&facilityIds[]=61576&facilityIds[]=61577&facilityIds[]=61581&facilityIds[]=61582&facilityIds[]=61584&facilityIds[]=61585&facilityIds[]=61586&facilityIds[]=61587&facilityIds[]=61588&facilityIds[]=61589&facilityIds[]=61591&facilityIds[]=61592&facilityIds[]=61596&facilityIds[]=61600&facilityIds[]=61602&facilityIds[]=61603&facilityIds[]=61604&facilityIds[]=61605&facilityIds[]=61606&facilityIds[]=61608&facilityIds[]=61609&facilityIds[]=61610&facilityIds[]=61611&facilityIds[]=61612&facilityIds[]=61615&facilityIds[]=61616&facilityIds[]=61617&facilityIds[]=61618&facilityIds[]=61624&facilityIds[]=61625&facilityIds[]=61626&facilityIds[]=61628&facilityIds[]=61629&facilityIds[]=61630&facilityIds[]=61631&facilityIds[]=61632&facilityIds[]=61633&facilityIds[]=61634&facilityIds[]=61635&facilityIds[]=61637&facilityIds[]=61638&facilityIds[]=61639&facilityIds[]=61640&facilityIds[]=61641&facilityIds[]=62955&facilityIds[]=62958&facilityIds[]=62959&facilityIds[]=62961&facilityIds[]=62962&facilityIds[]=62963&facilityIds[]=62967&facilityIds[]=62968&facilityIds[]=62969&facilityIds[]=62970&facilityIds[]=62972&facilityIds[]=62973&facilityIds[]=62975&facilityIds[]=62976&facilityIds[]=62978&facilityIds[]=62979&facilityIds[]=62980&facilityIds[]=62981&facilityIds[]=62982&facilityIds[]=62994&facilityIds[]=62995&facilityIds[]=62996&facilityIds[]=62997&facilityIds[]=62998&facilityIds[]=62999&facilityIds[]=63000&facilityIds[]=63001&facilityIds[]=63002&facilityIds[]=63003&facilityIds[]=63004&facilityIds[]=63005&facilityIds[]=63007&facilityIds[]=63008&facilityIds[]=63010&facilityIds[]=63016&facilityIds[]=63017&facilityIds[]=63018&facilityIds[]=63020&facilityIds[]=63024&facilityIds[]=63025&facilityIds[]=63026&facilityIds[]=63027&facilityIds[]=63028&facilityIds[]=63030&facilityIds[]=63032&facilityIds[]=63033&facilityIds[]=75443&from=2023-01-24&to=2023-05-15&startTime=&endTime=&fromTime=&toTime=&duration=0&language=Constant&suppressExceptions=false"
+    }, {
+      "name" : "setHeaders",
+      "nodeId" : "c65939e2-ebf8-4126-bf96-28930dce4ba1",
+      "description" : "",
+      "properties" : {
+        "_type" : "setHeaders",
+        "active" : true,
+        "addNamespaces" : false,
+        "camelGroup" : "core",
+        "headerList" : [ {
+          "headerName" : "Content-type",
+          "headerValue" : "application/x-www-form-urlencoded; charset=UTF-8",
+          "language" : "Constant",
+          "uuid" : "98800665-743c-4ebd-a0a5-8cf56b83a27f"
+        } ],
+        "name" : "setHeaders",
+        "namespaces" : [ ],
+        "suppressExceptions" : false,
+        "url" : ""
+      },
+      "_type" : "setHeaders",
+      "kameletPropertiesUrl" : "?addNamespaces=false&suppressExceptions=false"
+    }, {
+      "name" : "http",
+      "nodeId" : "f825f656-1f01-4d42-a53a-1578d5571735",
+      "description" : "",
+      "properties" : {
+        "_type" : "http",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "bridgeEndpoint" : false,
+        "camelGroup" : "component",
+        "connectTimeout" : "20000",
+        "connectionRequestTimeout" : "20000",
+        "disableStreamCache" : true,
+        "httpMethod" : "POST",
+        "httpUri" : "secure.rec1.com/FL/pinellas-county-fl/permits/getMultiFacilityAvailability/b4b2992fc05021408b9c71d6607145d2",
+        "name" : "http",
+        "scheme" : "https",
+        "socketTimeout" : "20000",
+        "throwExceptionOnFailure" : false,
+        "toDynamicEndpoint" : false,
+        "url" : ""
+      },
+      "_type" : "http",
+      "kameletPropertiesUrl" : "?bridgeEndpoint=false&connectTimeout=20000&connectionRequestTimeout=20000&disableStreamCache=true&httpMethod=POST&httpUri=secure.rec1.com/FL/pinellas-county-fl/permits/getMultiFacilityAvailability/b4b2992fc05021408b9c71d6607145d2&socketTimeout=20000&throwExceptionOnFailure=false"
+    }, {
+      "name" : "log",
+      "nodeId" : "cfd027b7-0d1a-4668-941a-ab3a65513335",
+      "description" : "",
+      "properties" : {
+        "_type" : "log",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "level" : "INFO",
+        "logType" : "EIP",
+        "loggerName" : "log",
+        "message" : "headers: ${headers}; body: ${body}",
+        "multiline" : false,
+        "name" : "log",
+        "showAll" : false,
+        "showBody" : true,
+        "showBodyType" : true,
+        "showCaughtException" : false,
+        "showExchangeId" : false,
+        "showHeaders" : false,
+        "showProperties" : false,
+        "showStackTrace" : false,
+        "toDynamicEndpoint" : false,
+        "url" : ""
+      },
+      "_type" : "log",
+      "kameletPropertiesUrl" : "?level=INFO&logType=EIP&loggerName=log&message=headers: ${headers}; body: ${body}&multiline=false&showAll=false&showBody=true&showBodyType=true&showCaughtException=false&showExchangeId=false&showHeaders=false&showProperties=false&showStackTrace=false"
+    }, {
+      "name" : "direct",
+      "nodeId" : "6b867b3d-e3e0-4593-bb2b-8d812dbe7ddb",
+      "description" : "",
+      "properties" : {
+        "_type" : "direct",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "camelGroup" : "core",
+        "endpointName" : "analyze",
+        "name" : "direct",
+        "toDynamicEndpoint" : false,
+        "url" : ""
+      },
+      "_type" : "direct",
+      "kameletPropertiesUrl" : "?endpointName=analyze"
+    } ]
+  }, {
+    "id" : null,
+    "camelRouteId" : "route-2",
+    "enabled" : true,
+    "routeId" : 2,
+    "route" : [ {
+      "name" : "direct",
+      "nodeId" : "fe89d7d4-2915-4d86-b934-d98dd3a82001",
+      "description" : "",
+      "properties" : {
+        "_type" : "direct",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "camelGroup" : "core",
+        "endpointName" : "analyze",
+        "name" : "direct",
+        "toDynamicEndpoint" : false,
+        "url" : ""
+      },
+      "_type" : "direct",
+      "kameletPropertiesUrl" : "?endpointName=analyze"
+    }, {
+      "name" : "splitter",
+      "nodeId" : "e9ff75cf-6213-46a1-bfc3-7e3b874b7d55",
+      "description" : "",
+      "properties" : {
+        "_type" : "splitter",
+        "active" : true,
+        "addNamespaces" : false,
+        "aggregationStrategy" : "",
+        "camelGroup" : "routing",
+        "expression" : "$.availability",
+        "language" : "JsonPath",
+        "name" : "splitter",
+        "namespaces" : [ ],
+        "parallelProcessing" : false,
+        "shareUnitOfWork" : false,
+        "stopOnException" : false,
+        "streaming" : false,
+        "suppressExceptions" : false,
+        "timeout" : "0",
+        "token" : ",",
+        "tokenize" : false,
+        "url" : "",
+        "useAggregationStrategy" : false
+      },
+      "_type" : "splitter",
+      "branches" : [ {
+        "type" : "split",
+        "label" : "split",
+        "route" : [ {
+          "name" : "log",
+          "nodeId" : "b1932ef9-f119-49a4-925d-6e78dabaa65f",
+          "description" : "",
+          "properties" : {
+            "_type" : "log",
+            "active" : true,
+            "advancedParameters" : [ ],
+            "camelGroup" : "component",
+            "level" : "INFO",
+            "logType" : "EIP",
+            "loggerName" : "log",
+            "message" : "fid: ${header.fid} fac: ${header.fac}",
+            "multiline" : false,
+            "name" : "log",
+            "showAll" : false,
+            "showBody" : true,
+            "showBodyType" : true,
+            "showCaughtException" : false,
+            "showExchangeId" : false,
+            "showHeaders" : false,
+            "showProperties" : false,
+            "showStackTrace" : false,
+            "toDynamicEndpoint" : false,
+            "url" : ""
+          },
+          "_type" : "log",
+          "kameletPropertiesUrl" : "?level=INFO&logType=EIP&loggerName=log&message=fid: ${header.fid} fac: ${header.fac}&multiline=false&showAll=false&showBody=true&showBodyType=true&showCaughtException=false&showExchangeId=false&showHeaders=false&showProperties=false&showStackTrace=false"
+        } ],
+        "properties" : { }
+      } ],
+      "kameletPropertiesUrl" : "?addNamespaces=false&expression=$.availability&language=JsonPath&parallelProcessing=false&shareUnitOfWork=false&stopOnException=false&streaming=false&suppressExceptions=false&timeout=0&token=,&tokenize=false&useAggregationStrategy=false"
+    } ]
+  } ],
+  "traits" : [ ],
+  "id" : "c4d2295a-6555-44da-ba9d-c3872eaeee87",
+  "name" : "pccg",
+  "description" : "",
+  "createdAt" : "2023-10-10T14:00:21.484024818",
+  "updatedAt" : "2023-10-10T14:00:21.484025499",
+  "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "updatedBy" : "123e4567-e89b-12d3-a456-426655440011"
+}

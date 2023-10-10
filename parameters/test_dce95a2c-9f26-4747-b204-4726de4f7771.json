@@ -1,0 +1,25 @@
+{
+  "type" : "EnvironmentGroup",
+  "parameters" : [ {
+    "parameterName" : "test",
+    "profileValues" : [ {
+      "profileUuid" : "54a1bd03-bf22-4cf9-8f5f-b10b40f166e9",
+      "profileName" : "Default",
+      "parameterValue" : ""
+    } ]
+  }, {
+    "parameterName" : "test2",
+    "profileValues" : [ {
+      "profileUuid" : "54a1bd03-bf22-4cf9-8f5f-b10b40f166e9",
+      "profileName" : "Default",
+      "parameterValue" : ""
+    } ]
+  } ],
+  "id" : "dce95a2c-9f26-4747-b204-4726de4f7771",
+  "name" : "test",
+  "description" : "test",
+  "createdAt" : "2023-10-10T14:00:20.576939938",
+  "updatedAt" : "2023-10-10T14:00:20.576940483",
+  "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "updatedBy" : "123e4567-e89b-12d3-a456-426655440011"
+}

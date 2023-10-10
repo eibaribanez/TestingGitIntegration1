@@ -1,0 +1,162 @@
+{
+  "revision" : 10,
+  "compression" : false,
+  "dataAnalyzer" : true,
+  "replicas" : 1,
+  "openApiUuid" : "123e4567-e89b-12d3-a456-426655440052",
+  "currentProfileUuid" : "123e4567-e89b-12d3-a456-426655440031",
+  "parameterGroupUuids" : [ ],
+  "repoResourceUuids" : [ "501697a6-4a81-4416-96df-8d082a60a7f6" ],
+  "routeDefinitions" : [ {
+    "id" : null,
+    "camelRouteId" : "route-1",
+    "enabled" : true,
+    "routeId" : 1,
+    "route" : [ {
+      "name" : "timer",
+      "nodeId" : "158eeee2-012e-4951-892e-d636c7afbd4d",
+      "description" : "",
+      "properties" : {
+        "_type" : "timer",
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "daemon" : true,
+        "delay" : "1000",
+        "fixedRate" : false,
+        "name" : "timer",
+        "period" : "1000",
+        "repeatCount" : "0",
+        "setScheduleTime" : false,
+        "time" : "2021-12-31 00:00:00",
+        "timerName" : "timer",
+        "url" : ""
+      },
+      "_type" : "timer",
+      "kameletPropertiesUrl" : "?daemon=true&delay=1000&fixedRate=false&period=1000&repeatCount=0&setScheduleTime=false&time=2021-12-31 00:00:00&timerName=timer"
+    }, {
+      "name" : "setBody",
+      "nodeId" : "20cf433e-ec48-465b-bf71-62491e33d0ec",
+      "description" : "",
+      "properties" : {
+        "_type" : "setBody",
+        "addNamespaces" : false,
+        "camelGroup" : "core",
+        "expression" : "Hello world",
+        "language" : "Simple",
+        "name" : "setBody",
+        "namespaces" : [ ],
+        "suppressExceptions" : false,
+        "url" : ""
+      },
+      "_type" : "setBody",
+      "kameletPropertiesUrl" : "?addNamespaces=false&expression=Hello world&language=Simple&suppressExceptions=false"
+    }, {
+      "name" : "log",
+      "nodeId" : "e3edbe7a-276c-4373-acfb-0dcdfbfe8071",
+      "description" : "",
+      "properties" : {
+        "_type" : "log",
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "level" : "INFO",
+        "logType" : "EIP",
+        "loggerName" : "log",
+        "message" : "headers: ${headers}; body: ${body}",
+        "multiline" : false,
+        "name" : "log",
+        "showAll" : false,
+        "showBody" : true,
+        "showBodyType" : true,
+        "showCaughtException" : false,
+        "showExchangeId" : false,
+        "showHeaders" : false,
+        "showProperties" : false,
+        "showStackTrace" : false,
+        "toDynamicEndpoint" : false,
+        "url" : ""
+      },
+      "_type" : "log",
+      "kameletPropertiesUrl" : "?level=INFO&logType=EIP&loggerName=log&message=headers: ${headers}; body: ${body}&multiline=false&showAll=false&showBody=true&showBodyType=true&showCaughtException=false&showExchangeId=false&showHeaders=false&showProperties=false&showStackTrace=false"
+    } ]
+  }, {
+    "id" : null,
+    "camelRouteId" : "route-2",
+    "enabled" : true,
+    "routeId" : 2,
+    "route" : [ {
+      "name" : "getRequest",
+      "nodeId" : "083facce-920e-482c-a365-15da20834382",
+      "description" : "",
+      "properties" : {
+        "_type" : "restApi",
+        "camelGroup" : "rest",
+        "consumes" : "application/json",
+        "endpoint" : "/",
+        "method" : "get",
+        "name" : "getRequest",
+        "operationName" : "default",
+        "produces" : "application/json",
+        "requestmethod" : "GET",
+        "url" : ""
+      },
+      "_type" : "restApi",
+      "kameletPropertiesUrl" : "?consumes=application/json&endpoint=/&method=get&operationName=default&produces=application/json&requestmethod=GET"
+    }, {
+      "name" : "atlasmap",
+      "nodeId" : "6ff61165-bad4-43a9-a20f-3b5989c38cc4",
+      "description" : "",
+      "properties" : {
+        "_type" : "atlasmap",
+        "advancedParameters" : [ ],
+        "allowContextMapAll" : false,
+        "camelGroup" : "component",
+        "contentCache" : false,
+        "lazyStartProducer" : false,
+        "name" : "atlasmap",
+        "resourceUri" : "atlasmap-mapping.adm",
+        "sourceMapName" : "",
+        "targetMapMode" : "MAP",
+        "targetMapName" : "",
+        "toDynamicEndpoint" : false,
+        "url" : ""
+      },
+      "_type" : "atlasmap",
+      "kameletPropertiesUrl" : "?allowContextMapAll=false&contentCache=false&lazyStartProducer=false&resourceUri=atlasmap-mapping.adm&targetMapMode=MAP"
+    }, {
+      "name" : "dslProcessor",
+      "nodeId" : "6665933e-31bd-4573-99b4-3460e3290231",
+      "description" : "",
+      "properties" : {
+        "_type" : "dslProcessor",
+        "camelGroup" : "core",
+        "dsl" : "from('direct://dsl-processor')",
+        "name" : "dslProcessor",
+        "url" : ""
+      },
+      "_type" : "dslProcessor",
+      "kameletPropertiesUrl" : "?dsl=from('direct://dsl-processor')"
+    }, {
+      "name" : "process",
+      "nodeId" : "be460345-5163-4484-a5e2-ce32eebc1c52",
+      "description" : "",
+      "properties" : {
+        "_type" : "process",
+        "camelGroup" : "transform",
+        "code" : "/*\n * Provide own codes to consume or translate the message exchanges.\n * @param Exchange exchange\n * exchange.getIn().setHeader(\"date\", new Date())\n */",
+        "import" : "// import org.apache.camel.Message",
+        "name" : "process",
+        "url" : ""
+      },
+      "_type" : "process",
+      "kameletPropertiesUrl" : "?code=/*\n * Provide own codes to consume or translate the message exchanges.\n * @param Exchange exchange\n * exchange.getIn().setHeader(\"date\", new Date())\n */&import=// import org.apache.camel.Message"
+    } ]
+  } ],
+  "traits" : [ ],
+  "id" : "a6217efd-c2b4-4d5a-b6e4-ed4400bde5e4",
+  "name" : "demo123",
+  "description" : "",
+  "createdAt" : "2023-10-10T14:00:21.352824628",
+  "updatedAt" : "2023-10-10T14:00:21.352826029",
+  "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "updatedBy" : "123e4567-e89b-12d3-a456-426655440011"
+}

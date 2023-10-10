@@ -1,0 +1,536 @@
+{
+  "revision" : 42,
+  "compression" : false,
+  "dataAnalyzer" : true,
+  "replicas" : 1,
+  "openApiUuid" : null,
+  "currentProfileUuid" : "123e4567-e89b-12d3-a456-426655440031",
+  "parameterGroupUuids" : [ ],
+  "repoResourceUuids" : [ ],
+  "routeDefinitions" : [ {
+    "id" : null,
+    "camelRouteId" : "router-integration",
+    "enabled" : true,
+    "routeId" : 1,
+    "route" : [ {
+      "name" : "timer",
+      "nodeId" : "037da8f1-e21b-41bd-aa36-4e2c22688e6a",
+      "description" : "once per second",
+      "properties" : {
+        "_type" : "timer",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "daemon" : true,
+        "delay" : "1000",
+        "fixedRate" : false,
+        "name" : "timer",
+        "period" : "1000",
+        "repeatCount" : "0",
+        "setScheduleTime" : false,
+        "time" : "2021-12-31 00:00:00",
+        "timerName" : "timer",
+        "url" : ""
+      },
+      "_type" : "timer",
+      "kameletPropertiesUrl" : "?daemon=true&delay=1000&fixedRate=false&period=1000&repeatCount=0&setScheduleTime=false&time=2021-12-31 00:00:00&timerName=timer"
+    }, {
+      "name" : "setBody",
+      "nodeId" : "9fa68ed5-3f90-425b-ac44-42c0cc750df8",
+      "description" : "add exchangeId to body",
+      "properties" : {
+        "_type" : "setBody",
+        "active" : true,
+        "addNamespaces" : false,
+        "camelGroup" : "core",
+        "expression" : "${exchangeId}",
+        "language" : "Simple",
+        "name" : "setBody",
+        "namespaces" : [ ],
+        "suppressExceptions" : false,
+        "url" : ""
+      },
+      "_type" : "setBody",
+      "kameletPropertiesUrl" : "?addNamespaces=false&expression=${exchangeId}&language=Simple&suppressExceptions=false"
+    }, {
+      "name" : "salesforce",
+      "nodeId" : "35924f30-2443-4465-a2aa-1df1f8c8ca09",
+      "description" : "",
+      "properties" : {
+        "_type" : "salesforce",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "name" : "salesforce",
+        "notifyForFields" : "ALL",
+        "operationName" : "query",
+        "rawPayload" : false,
+        "replayId" : "-1",
+        "sObjectName" : "Contact",
+        "sObjectQuery" : "SELECT Id, Name FROM Contact",
+        "setsObjectName" : false,
+        "setsObjectQuery" : true,
+        "topicName" : "CamelTestTopic",
+        "updateTopic" : false,
+        "url" : ""
+      },
+      "_type" : "salesforce",
+      "kameletPropertiesUrl" : "?notifyForFields=ALL&operationName=query&rawPayload=false&replayId=-1&sObjectName=Contact&sObjectQuery=SELECT Id, Name FROM Contact&setsObjectName=false&setsObjectQuery=true&topicName=CamelTestTopic&updateTopic=false"
+    }, {
+      "name" : "snowflake",
+      "nodeId" : "b5eee8e9-d424-40dc-ab4f-5386b1f657e1",
+      "description" : "",
+      "properties" : {
+        "_type" : "snowflake",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "dataSource" : "#snowflake",
+        "name" : "snowflake",
+        "query" : "SELECT * FROM jetic LIMIT 10",
+        "toDynamicEndpoint" : false,
+        "url" : ""
+      },
+      "_type" : "snowflake",
+      "kameletPropertiesUrl" : "?dataSource=#snowflake&query=SELECT * FROM jetic LIMIT 10"
+    }, {
+      "name" : "multicast",
+      "nodeId" : "3d5e9423-f03e-4253-add6-831217361305",
+      "description" : "multicast example",
+      "properties" : {
+        "_type" : "multicast",
+        "active" : true,
+        "aggregationStrategy" : "new org.apache.camel.processor.aggregate.UseLatestAggregationStrategy()",
+        "camelGroup" : "routing",
+        "name" : "multicast",
+        "parallelProcessing" : false,
+        "stopOnAggregateException" : false,
+        "stopOnException" : false,
+        "timeout" : "0",
+        "uris" : [ {
+          "uri" : "seda://route-3"
+        } ],
+        "url" : "",
+        "useAggregationStrategy" : false
+      },
+      "_type" : "multicast",
+      "branches" : [ {
+        "type" : "route",
+        "label" : "route",
+        "route" : [ {
+          "name" : "direct",
+          "nodeId" : "02f79557-0772-4954-acfc-de61fd98262c",
+          "description" : "to route-2",
+          "properties" : {
+            "_type" : "direct",
+            "active" : true,
+            "advancedParameters" : [ ],
+            "camelGroup" : "core",
+            "endpointName" : "route-2",
+            "name" : "direct",
+            "toDynamicEndpoint" : false,
+            "url" : ""
+          },
+          "_type" : "direct",
+          "kameletPropertiesUrl" : "?endpointName=route-2"
+        } ],
+        "properties" : { }
+      } ],
+      "kameletPropertiesUrl" : "?aggregationStrategy=new org.apache.camel.processor.aggregate.UseLatestAggregationStrategy()&parallelProcessing=false&stopOnAggregateException=false&stopOnException=false&timeout=0&useAggregationStrategy=false"
+    } ]
+  }, {
+    "id" : null,
+    "camelRouteId" : "route-2",
+    "enabled" : true,
+    "routeId" : 2,
+    "route" : [ {
+      "name" : "direct",
+      "nodeId" : "d25e77f7-8c1f-4ddc-8b6e-466d9bf0700c",
+      "description" : "from route-2",
+      "properties" : {
+        "_type" : "direct",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "camelGroup" : "core",
+        "endpointName" : "route-2",
+        "name" : "direct",
+        "toDynamicEndpoint" : false,
+        "url" : ""
+      },
+      "_type" : "direct",
+      "kameletPropertiesUrl" : "?endpointName=route-2"
+    }, {
+      "name" : "messageRouter",
+      "nodeId" : "d8fefec8-2940-4cd8-b557-781dd60be8d7",
+      "description" : "outer message router",
+      "properties" : {
+        "_type" : "messageRouter",
+        "active" : true,
+        "camelGroup" : "routing",
+        "name" : "messageRouter",
+        "url" : ""
+      },
+      "_type" : "messageRouter",
+      "branches" : [ {
+        "type" : "when",
+        "label" : "when 0",
+        "route" : [ {
+          "name" : "setBody",
+          "nodeId" : "3fbb0574-84a6-458a-a2e1-6a96293825ae",
+          "description" : "update body",
+          "properties" : {
+            "_type" : "setBody",
+            "active" : true,
+            "addNamespaces" : false,
+            "camelGroup" : "core",
+            "expression" : "${body} ends with \"0\"",
+            "language" : "Simple",
+            "name" : "setBody",
+            "namespaces" : [ ],
+            "suppressExceptions" : false,
+            "url" : ""
+          },
+          "_type" : "setBody",
+          "kameletPropertiesUrl" : "?addNamespaces=false&expression=${body} ends with \"0\"&language=Simple&suppressExceptions=false"
+        }, {
+          "name" : "sql",
+          "nodeId" : "810cb01d-da01-4100-a46d-972cbf6f7e28",
+          "description" : "",
+          "properties" : {
+            "_type" : "sql",
+            "active" : true,
+            "advancedParameters" : [ {
+              "name" : "",
+              "uuid" : "02dab2f1-be9f-4ea2-bc79-5935e98ce3f6",
+              "value" : ""
+            } ],
+            "batch" : false,
+            "camelGroup" : "component",
+            "dataSource" : "#dataSource",
+            "name" : "sql",
+            "outputHeader" : "headerName",
+            "query" : "select * from table where id=:#${exchangeProperty.myId} order by name",
+            "setOutputHeader" : false,
+            "toDynamicEndpoint" : false,
+            "transacted" : false,
+            "url" : "",
+            "useMessageBodyForSql" : true
+          },
+          "_type" : "sql",
+          "kameletPropertiesUrl" : "?batch=false&dataSource=#dataSource&outputHeader=headerName&query=select * from table where id=:#${exchangeProperty.myId} order by name&setOutputHeader=false&transacted=false&useMessageBodyForSql=true"
+        } ],
+        "properties" : {
+          "addNamespaces" : "false",
+          "condition" : "${body} ends with \"0\"",
+          "language" : "Simple",
+          "namespaces" : [ ],
+          "suppressExceptions" : "false"
+        }
+      }, {
+        "type" : "when",
+        "label" : "when 2",
+        "route" : [ {
+          "name" : "setBody",
+          "nodeId" : "1c7d00ae-226c-455a-8dc4-856dc9e7fb07",
+          "description" : "update body",
+          "properties" : {
+            "_type" : "setBody",
+            "active" : true,
+            "addNamespaces" : false,
+            "camelGroup" : "core",
+            "expression" : "${body} ends with \"2\"",
+            "language" : "Simple",
+            "name" : "setBody",
+            "namespaces" : [ ],
+            "suppressExceptions" : false,
+            "url" : ""
+          },
+          "_type" : "setBody",
+          "kameletPropertiesUrl" : "?addNamespaces=false&expression=${body} ends with \"2\"&language=Simple&suppressExceptions=false"
+        } ],
+        "properties" : {
+          "addNamespaces" : "false",
+          "condition" : "body().endsWith('2')",
+          "language" : "GroovyDsl",
+          "namespaces" : [ ],
+          "suppressExceptions" : "false"
+        }
+      }, {
+        "type" : "otherwise",
+        "label" : "otherwise",
+        "route" : [ {
+          "name" : "messageRouter",
+          "nodeId" : "05b9dba8-338e-4707-a6ee-9d764ed75928",
+          "description" : "inner message router",
+          "properties" : {
+            "_type" : "messageRouter",
+            "active" : true,
+            "camelGroup" : "routing",
+            "name" : "messageRouter",
+            "url" : ""
+          },
+          "_type" : "messageRouter",
+          "branches" : [ {
+            "type" : "when",
+            "label" : "when 4",
+            "route" : [ {
+              "name" : "setBody",
+              "nodeId" : "b3c40f00-8d07-4cec-9144-00098479f8e2",
+              "description" : "update body",
+              "properties" : {
+                "_type" : "setBody",
+                "active" : true,
+                "addNamespaces" : false,
+                "camelGroup" : "core",
+                "expression" : "${body} ends with \"4\"",
+                "language" : "Simple",
+                "name" : "setBody",
+                "namespaces" : [ ],
+                "suppressExceptions" : false,
+                "url" : ""
+              },
+              "_type" : "setBody",
+              "kameletPropertiesUrl" : "?addNamespaces=false&expression=${body} ends with \"4\"&language=Simple&suppressExceptions=false"
+            } ],
+            "properties" : {
+              "addNamespaces" : "false",
+              "condition" : "${body} ends with \"4\"",
+              "language" : "Simple",
+              "namespaces" : [ ],
+              "suppressExceptions" : "false"
+            }
+          }, {
+            "type" : "otherwise",
+            "label" : "otherwise",
+            "route" : [ {
+              "name" : "throwException",
+              "nodeId" : "56919287-da18-42ec-a994-0fb387bf89ee",
+              "description" : "unsupported operation",
+              "properties" : {
+                "_type" : "throwException",
+                "active" : true,
+                "camelGroup" : "exception",
+                "exception" : "new UnsupportedOperationException(\"body does not end with 0, 2, or 4\")",
+                "name" : "throwException",
+                "url" : ""
+              },
+              "_type" : "throwException",
+              "kameletPropertiesUrl" : "?exception=new UnsupportedOperationException(\"body does not end with 0, 2, or 4\")"
+            } ],
+            "properties" : { }
+          } ],
+          "kameletPropertiesUrl" : ""
+        } ],
+        "properties" : { }
+      }, {
+        "type" : "route",
+        "label" : "route",
+        "route" : [ {
+          "name" : "log",
+          "nodeId" : "5aece986-2296-4568-a2af-4b1d1370e503",
+          "description" : "EIP log route-2",
+          "properties" : {
+            "_type" : "log",
+            "active" : true,
+            "advancedParameters" : [ ],
+            "camelGroup" : "component",
+            "level" : "INFO",
+            "logType" : "EIP",
+            "loggerName" : "log",
+            "message" : "body: ${body}",
+            "multiline" : false,
+            "name" : "log",
+            "showAll" : true,
+            "showBody" : true,
+            "showBodyType" : true,
+            "showCaughtException" : false,
+            "showExchangeId" : false,
+            "showHeaders" : false,
+            "showProperties" : false,
+            "showStackTrace" : false,
+            "toDynamicEndpoint" : false,
+            "url" : ""
+          },
+          "_type" : "log",
+          "kameletPropertiesUrl" : "?level=INFO&logType=EIP&loggerName=log&message=body: ${body}&multiline=false&showAll=true&showBody=true&showBodyType=true&showCaughtException=false&showExchangeId=false&showHeaders=false&showProperties=false&showStackTrace=false"
+        } ],
+        "properties" : { }
+      } ],
+      "kameletPropertiesUrl" : ""
+    } ]
+  }, {
+    "id" : null,
+    "camelRouteId" : "route-3",
+    "enabled" : true,
+    "routeId" : 3,
+    "route" : [ {
+      "name" : "messagingEndpoint",
+      "nodeId" : "eb3afa72-4d00-4774-90a7-af1d99ff5f51",
+      "description" : "from route-3 asynchronously",
+      "properties" : {
+        "_type" : "messagingEndpoint",
+        "active" : true,
+        "camelGroup" : "core",
+        "name" : "messagingEndpoint",
+        "toDynamicEndpoint" : false,
+        "uri" : "seda://route-3",
+        "url" : ""
+      },
+      "_type" : "messagingEndpoint",
+      "kameletPropertiesUrl" : "?uri=seda://route-3"
+    }, {
+      "name" : "setBody",
+      "nodeId" : "103256d2-e0a6-4bcc-ab73-bb8ab117cb00",
+      "description" : "add camelId to body",
+      "properties" : {
+        "_type" : "setBody",
+        "active" : true,
+        "addNamespaces" : false,
+        "camelGroup" : "core",
+        "expression" : "${camelId}",
+        "language" : "Simple",
+        "name" : "setBody",
+        "namespaces" : [ ],
+        "suppressExceptions" : false,
+        "url" : ""
+      },
+      "_type" : "setBody",
+      "kameletPropertiesUrl" : "?addNamespaces=false&expression=${camelId}&language=Simple&suppressExceptions=false"
+    }, {
+      "name" : "log",
+      "nodeId" : "9d956e0f-84e4-4707-8765-23ad5b4cc2d1",
+      "description" : "EIP log route-3",
+      "properties" : {
+        "_type" : "log",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "level" : "INFO",
+        "logType" : "EIP",
+        "loggerName" : "log",
+        "message" : "1234",
+        "multiline" : false,
+        "name" : "log",
+        "showAll" : true,
+        "showBody" : true,
+        "showBodyType" : true,
+        "showCaughtException" : false,
+        "showExchangeId" : false,
+        "showHeaders" : false,
+        "showProperties" : false,
+        "showStackTrace" : false,
+        "toDynamicEndpoint" : false,
+        "url" : ""
+      },
+      "_type" : "log",
+      "kameletPropertiesUrl" : "?level=INFO&logType=EIP&loggerName=log&message=1234&multiline=false&showAll=true&showBody=true&showBodyType=true&showCaughtException=false&showExchangeId=false&showHeaders=false&showProperties=false&showStackTrace=false"
+    } ]
+  }, {
+    "id" : null,
+    "camelRouteId" : "route-4",
+    "enabled" : true,
+    "routeId" : 4,
+    "route" : [ {
+      "name" : "onException",
+      "nodeId" : "2a80b580-7a88-46ef-8da8-f3111c172f9c",
+      "description" : "handle all exceptions",
+      "properties" : {
+        "_type" : "onException",
+        "active" : true,
+        "asyncDelayedRedelivery" : false,
+        "camelGroup" : "exception",
+        "exceptionBehavior" : "Handle the exceptions",
+        "exceptionList" : [ {
+          "exception" : "Exception"
+        } ],
+        "maximumRedeliveries" : "0",
+        "name" : "onException",
+        "redeliveryDelay" : "0",
+        "setRedeliveryDelay" : true,
+        "setRedeliveryTriesCount" : true,
+        "url" : "",
+        "useOriginalMessage" : true
+      },
+      "_type" : "onException",
+      "branches" : [ {
+        "type" : "route",
+        "label" : "route",
+        "route" : [ {
+          "name" : "log",
+          "nodeId" : "06093ec0-5c60-4f42-a5b7-ac168d40aa5f",
+          "description" : "log caught exception",
+          "properties" : {
+            "_type" : "log",
+            "active" : true,
+            "advancedParameters" : [ ],
+            "camelGroup" : "component",
+            "level" : "ERROR",
+            "logType" : "Component",
+            "loggerName" : "log",
+            "message" : "headers: ${headers}; body: ${body}",
+            "multiline" : false,
+            "name" : "log",
+            "showAll" : true,
+            "showBody" : true,
+            "showBodyType" : true,
+            "showCaughtException" : true,
+            "showExchangeId" : false,
+            "showHeaders" : false,
+            "showProperties" : false,
+            "showStackTrace" : false,
+            "toDynamicEndpoint" : false,
+            "url" : ""
+          },
+          "_type" : "log",
+          "kameletPropertiesUrl" : "?level=ERROR&logType=Component&loggerName=log&message=headers: ${headers}; body: ${body}&multiline=false&showAll=true&showBody=true&showBodyType=true&showCaughtException=true&showExchangeId=false&showHeaders=false&showProperties=false&showStackTrace=false"
+        } ],
+        "properties" : { }
+      } ],
+      "kameletPropertiesUrl" : "?asyncDelayedRedelivery=false&exceptionBehavior=Handle the exceptions&maximumRedeliveries=0&redeliveryDelay=0&setRedeliveryDelay=true&setRedeliveryTriesCount=true&useOriginalMessage=true"
+    } ]
+  }, {
+    "id" : null,
+    "camelRouteId" : "route-5",
+    "enabled" : true,
+    "routeId" : 5,
+    "route" : [ {
+      "name" : "debezium",
+      "nodeId" : "7a92632a-9c53-49b0-be7a-515169fec481",
+      "description" : "",
+      "properties" : {
+        "_type" : "debezium",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "componentName" : "name",
+        "databaseDbname" : "",
+        "databaseHostname" : "",
+        "databasePassword" : "",
+        "databasePort" : "5432",
+        "databaseServerName" : "",
+        "databaseUser" : "",
+        "mongodbHosts" : "",
+        "mongodbName" : "",
+        "mongodbPassword" : "",
+        "mongodbUser" : "",
+        "name" : "debezium",
+        "offsetStorageFileName" : "",
+        "pluginName" : "",
+        "schemaIncludeList" : "public",
+        "scheme" : "debezium-postgres",
+        "tableIncludeList" : "",
+        "url" : ""
+      },
+      "_type" : "debezium",
+      "kameletPropertiesUrl" : "?componentName=name&databasePort=5432&schemaIncludeList=public"
+    } ]
+  } ],
+  "traits" : [ ],
+  "id" : "123e4567-e89b-12d3-a456-426655440051",
+  "name" : "router-integration",
+  "description" : "Router integration with the message router example",
+  "createdAt" : "2023-10-10T14:00:20.937424458",
+  "updatedAt" : "2023-10-10T14:00:20.937425264",
+  "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "updatedBy" : "123e4567-e89b-12d3-a456-426655440011"
+}

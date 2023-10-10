@@ -1,0 +1,23 @@
+{
+  "type" : "SNOWFLAKE_CONNECTION",
+  "properties" : {
+    "beanName" : "snowflake",
+    "database" : "DEMO_DB",
+    "driverClassNameSnowflake" : "net.snowflake.client.jdbc.SnowflakeDriver",
+    "host" : "wxa32715.us-east-1.snowflakecomputing.com",
+    "mavenSnowflake" : "net.snowflake:snowflake-jdbc:3.13.8",
+    "password" : "Dummy password123",
+    "schema" : "public",
+    "type" : "Simple",
+    "urlSnowflake" : "jdbc:snowflake://xy12345.snowflakecomputing.com?user=jetic&password=password&db=mydb&schema=public&warehouse=mywh",
+    "username" : "hernancitog",
+    "warehouse" : "COMPUTE_WH"
+  },
+  "id" : "2e49dcd7-f16c-4aa6-a813-0ba0d8616fcb",
+  "name" : "demoDb",
+  "description" : "",
+  "createdAt" : "2023-10-10T14:00:20.641613233",
+  "updatedAt" : "2023-10-10T14:00:20.641614179",
+  "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "updatedBy" : "123e4567-e89b-12d3-a456-426655440011"
+}

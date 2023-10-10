@@ -1,0 +1,112 @@
+{
+  "revision" : 16,
+  "compression" : false,
+  "dataAnalyzer" : true,
+  "replicas" : 1,
+  "openApiUuid" : "e64116d9-65f1-4b1c-8815-a9fe2c01a149",
+  "currentProfileUuid" : "123e4567-e89b-12d3-a456-426655440031",
+  "parameterGroupUuids" : [ ],
+  "repoResourceUuids" : [ ],
+  "routeDefinitions" : [ {
+    "id" : null,
+    "camelRouteId" : "route-1",
+    "enabled" : true,
+    "routeId" : 1,
+    "route" : [ {
+      "name" : "getRequest",
+      "nodeId" : "4bb19019-7282-4751-ab32-7adbce5f0939",
+      "description" : "",
+      "properties" : {
+        "_type" : "restApi",
+        "active" : true,
+        "camelGroup" : "rest",
+        "consumes" : "application/json",
+        "endpoint" : "/",
+        "method" : "get",
+        "name" : "getRequest",
+        "operationName" : "Get",
+        "produces" : "application/json",
+        "requestmethod" : "GET",
+        "url" : ""
+      },
+      "_type" : "restApi",
+      "kameletPropertiesUrl" : "?consumes=application/json&endpoint=/&method=get&operationName=Get&produces=application/json&requestmethod=GET"
+    }, {
+      "name" : "log",
+      "nodeId" : "f455bfc0-e624-4121-a2fa-3f8e59c08d38",
+      "description" : "",
+      "properties" : {
+        "_type" : "log",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "level" : "INFO",
+        "logType" : "EIP",
+        "loggerName" : "log",
+        "message" : "headers: ${headers}; body: ${body}",
+        "multiline" : false,
+        "name" : "log",
+        "showAll" : false,
+        "showBody" : true,
+        "showBodyType" : true,
+        "showCaughtException" : false,
+        "showExchangeId" : false,
+        "showHeaders" : false,
+        "showProperties" : false,
+        "showStackTrace" : false,
+        "toDynamicEndpoint" : false,
+        "url" : ""
+      },
+      "_type" : "log",
+      "kameletPropertiesUrl" : "?level=INFO&logType=EIP&loggerName=log&message=headers: ${headers}; body: ${body}&multiline=false&showAll=false&showBody=true&showBodyType=true&showCaughtException=false&showExchangeId=false&showHeaders=false&showProperties=false&showStackTrace=false"
+    }, {
+      "name" : "setBody",
+      "nodeId" : "979a0c6f-2cbb-456e-ba61-ac956f724047",
+      "description" : "",
+      "properties" : {
+        "_type" : "setBody",
+        "active" : true,
+        "addNamespaces" : false,
+        "camelGroup" : "core",
+        "expression" : "exchangeId: ${exchangeId}",
+        "language" : "Simple",
+        "name" : "setBody",
+        "namespaces" : [ ],
+        "suppressExceptions" : false,
+        "url" : ""
+      },
+      "_type" : "setBody",
+      "kameletPropertiesUrl" : "?addNamespaces=false&expression=exchangeId: ${exchangeId}&language=Simple&suppressExceptions=false"
+    }, {
+      "name" : "flatpack",
+      "nodeId" : "26cfa945-8094-44ba-a27b-0aa8710f859c",
+      "description" : "",
+      "properties" : {
+        "_type" : "flatpack",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "allowShortLines" : false,
+        "camelGroup" : "component",
+        "delimiter" : ",",
+        "ignoreExtraColumns" : false,
+        "ignoreFirstRecord" : true,
+        "name" : "flatpack",
+        "resourceUri" : "flatPackConfig.pzmap.xml",
+        "textQualifier" : "\"",
+        "toDynamicEndpoint" : false,
+        "type" : "fixed",
+        "url" : ""
+      },
+      "_type" : "flatpack",
+      "kameletPropertiesUrl" : "?allowShortLines=false&delimiter=,&ignoreExtraColumns=false&ignoreFirstRecord=true&resourceUri=flatPackConfig.pzmap.xml&textQualifier=\"&type=fixed"
+    } ]
+  } ],
+  "traits" : [ ],
+  "id" : "7a470e66-6c55-4405-835e-f05f6c36258d",
+  "name" : "api-test",
+  "description" : "",
+  "createdAt" : "2023-10-10T14:00:21.23627886",
+  "updatedAt" : "2023-10-10T14:00:21.23629246",
+  "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "updatedBy" : "123e4567-e89b-12d3-a456-426655440011"
+}

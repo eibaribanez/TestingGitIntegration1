@@ -1,0 +1,129 @@
+{
+  "revision" : 8,
+  "compression" : false,
+  "dataAnalyzer" : true,
+  "replicas" : 1,
+  "openApiUuid" : null,
+  "currentProfileUuid" : "2a2471f4-02f5-4877-9dba-28e2b7155fe3",
+  "parameterGroupUuids" : [ "455f7c02-7606-4f82-acbb-6df635900c39" ],
+  "repoResourceUuids" : [ ],
+  "routeDefinitions" : [ {
+    "id" : null,
+    "camelRouteId" : "route-1",
+    "enabled" : true,
+    "routeId" : 1,
+    "route" : [ {
+      "name" : "clearBody",
+      "nodeId" : "32155574-6fa0-48d0-97bb-08192012a9f4",
+      "description" : "",
+      "properties" : {
+        "_type" : "clearBody",
+        "camelGroup" : "core",
+        "name" : "clearBody",
+        "url" : ""
+      },
+      "_type" : "clearBody",
+      "kameletPropertiesUrl" : ""
+    }, {
+      "name" : "setHeaders",
+      "nodeId" : "99951306-6fa1-42b1-8309-86b6a7562708",
+      "description" : "",
+      "properties" : {
+        "_type" : "setHeaders",
+        "active" : true,
+        "addNamespaces" : false,
+        "camelGroup" : "core",
+        "headerList" : [ {
+          "headerName" : "Authentication",
+          "headerValue" : "",
+          "language" : "Simple",
+          "uuid" : "f1060c8b-81d4-4816-a1ff-e72eb8445643"
+        } ],
+        "name" : "setHeaders",
+        "namespaces" : [ ],
+        "suppressExceptions" : false,
+        "url" : ""
+      },
+      "_type" : "setHeaders",
+      "kameletPropertiesUrl" : "?addNamespaces=false&suppressExceptions=false"
+    }, {
+      "name" : "http",
+      "nodeId" : "3fb6adba-eedd-479d-90de-449965906162",
+      "description" : "",
+      "properties" : {
+        "_type" : "http",
+        "active" : true,
+        "advancedParameters" : [ {
+          "name" : "skip",
+          "uuid" : "69f9a37a-658c-400a-98e8-019ba60dac43",
+          "value" : ""
+        } ],
+        "bridgeEndpoint" : false,
+        "camelGroup" : "component",
+        "connectTimeout" : "20000",
+        "connectionRequestTimeout" : "20000",
+        "disableStreamCache" : true,
+        "httpMethod" : "GET",
+        "httpUri" : "api.datagrate.co",
+        "name" : "http",
+        "scheme" : "http",
+        "socketTimeout" : "20000",
+        "throwExceptionOnFailure" : true,
+        "toDynamicEndpoint" : false,
+        "url" : ""
+      },
+      "_type" : "http",
+      "kameletPropertiesUrl" : "?bridgeEndpoint=false&connectTimeout=20000&connectionRequestTimeout=20000&disableStreamCache=true&httpMethod=GET&httpUri=api.datagrate.co&socketTimeout=20000&throwExceptionOnFailure=true"
+    } ]
+  }, {
+    "id" : null,
+    "camelRouteId" : "route-2",
+    "enabled" : true,
+    "routeId" : 2,
+    "route" : [ {
+      "name" : "direct",
+      "nodeId" : "986516c7-8506-4d92-a944-a60085ba69c2",
+      "description" : "",
+      "properties" : {
+        "_type" : "direct",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "camelGroup" : "core",
+        "endpointName" : "direct",
+        "name" : "direct",
+        "toDynamicEndpoint" : false,
+        "url" : ""
+      },
+      "_type" : "direct",
+      "kameletPropertiesUrl" : "?endpointName=direct"
+    } ]
+  }, {
+    "id" : null,
+    "camelRouteId" : "route-3",
+    "enabled" : true,
+    "routeId" : 3,
+    "route" : [ {
+      "name" : "dslProcessor",
+      "nodeId" : "9be95dbe-dd17-408f-a955-3e5719164b97",
+      "description" : "",
+      "properties" : {
+        "_type" : "dslProcessor",
+        "active" : true,
+        "camelGroup" : "core",
+        "dsl" : "from('direct://dsl-processor')",
+        "name" : "dslProcessor",
+        "url" : ""
+      },
+      "_type" : "dslProcessor",
+      "kameletPropertiesUrl" : "?dsl=from('direct://dsl-processor')"
+    } ]
+  } ],
+  "traits" : [ ],
+  "id" : "8f9e34dd-a48d-45fe-a7ac-282c9f364cb5",
+  "name" : "R001",
+  "description" : "JP authentication proxy service",
+  "createdAt" : "2023-10-10T14:00:21.057849665",
+  "updatedAt" : "2023-10-10T14:00:21.05785066",
+  "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "updatedBy" : "123e4567-e89b-12d3-a456-426655440011"
+}
