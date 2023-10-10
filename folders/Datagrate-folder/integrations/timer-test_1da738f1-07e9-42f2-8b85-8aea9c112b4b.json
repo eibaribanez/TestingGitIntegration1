@@ -1,5 +1,5 @@
 {
-  "revision" : 104,
+  "revision" : 107,
   "compression" : false,
   "dataAnalyzer" : true,
   "replicas" : 1,
@@ -87,6 +87,33 @@
     "enabled" : true,
     "routeId" : 2,
     "route" : [ {
+      "name" : "file",
+      "nodeId" : "182486b3-069c-4a2b-9041-76911f4f2072",
+      "description" : "",
+      "properties" : {
+        "_type" : "file",
+        "active" : true,
+        "advancedParameters" : [ {
+          "name" : "",
+          "uuid" : "063f6e9a-5441-49df-b12c-45022037320c",
+          "value" : ""
+        } ],
+        "autoCreate" : true,
+        "bufferSize" : "131072",
+        "camelGroup" : "component",
+        "charset" : "utf-8",
+        "delete" : false,
+        "directoryName" : "/tmp",
+        "fileName" : "package.json",
+        "name" : "file",
+        "noop" : false,
+        "recursive" : false,
+        "setCharset" : false,
+        "url" : ""
+      },
+      "_type" : "file",
+      "kameletPropertiesUrl" : "?directoryName=/tmp&autoCreate=true&bufferSize=131072&setCharset=false&charset=utf-8&delete=false&fileName=package.json&noop=false&recursive=false"
+    }, {
       "name" : "timer",
       "nodeId" : "86fd2461-072b-42ea-b5bc-671ed8e36539",
       "description" : "",
@@ -108,32 +135,6 @@
       },
       "_type" : "timer",
       "kameletPropertiesUrl" : "?timerName=timer&period=10000&repeatCount=0&delay=1000&fixedRate=false&daemon=true&setScheduleTime=false&time=2021-12-31 00:00:00"
-    }, {
-      "name" : "file",
-      "nodeId" : "182486b3-069c-4a2b-9041-76911f4f2072",
-      "description" : "",
-      "properties" : {
-        "_type" : "file",
-        "active" : true,
-        "advancedParameters" : [ {
-          "name" : "",
-          "uuid" : "063f6e9a-5441-49df-b12c-45022037320c",
-          "value" : ""
-        } ],
-        "autoCreate" : true,
-        "bufferSize" : "131072",
-        "camelGroup" : "component",
-        "charset" : "utf-8",
-        "directoryName" : "/tmp",
-        "fileName" : "package.json",
-        "flatten" : false,
-        "name" : "file",
-        "setCharset" : false,
-        "toDynamicEndpoint" : false,
-        "url" : ""
-      },
-      "_type" : "file",
-      "kameletPropertiesUrl" : "?directoryName=/tmp&autoCreate=true&bufferSize=131072&setCharset=false&charset=utf-8&fileName=package.json&flatten=false"
     }, {
       "name" : "log",
       "nodeId" : "6b86461e-0808-4ac9-b9de-897efbd6aaba",
@@ -169,7 +170,7 @@
   "name" : "timer-test",
   "description" : "Timer Test",
   "createdAt" : "2023-10-10T14:00:21.020402863",
-  "updatedAt" : "2023-10-10T20:25:38.602525336",
+  "updatedAt" : "2023-10-10T20:27:43.047672987",
   "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
   "updatedBy" : "123e4567-e89b-12d3-a456-426655440011"
 }
