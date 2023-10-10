@@ -1,5 +1,5 @@
 {
-  "revision" : 102,
+  "revision" : 104,
   "compression" : false,
   "dataAnalyzer" : true,
   "replicas" : 1,
@@ -14,7 +14,7 @@
     "routeId" : 1,
     "route" : [ {
       "name" : "timer",
-      "nodeId" : "a65d80b7-c62a-4415-8ba8-b236369285ed",
+      "nodeId" : "2d61cf32-64b4-4779-b2c7-05b2ce071a91",
       "description" : "",
       "properties" : {
         "_type" : "timer",
@@ -36,7 +36,7 @@
       "kameletPropertiesUrl" : "?timerName=timer&period=10000&repeatCount=0&delay=10000&fixedRate=false&daemon=true&setScheduleTime=false&time=2021-12-31 00:00:00"
     }, {
       "name" : "setBody",
-      "nodeId" : "dac67032-0bcb-48a5-86c3-1917a75a7d3f",
+      "nodeId" : "af5e33f5-b51e-412e-9228-13c4241cab96",
       "description" : "",
       "properties" : {
         "_type" : "setBody",
@@ -54,7 +54,7 @@
       "kameletPropertiesUrl" : "?language=Simple&expression=exchangeId: ${exchangeId}&addNamespaces=false&suppressExceptions=false"
     }, {
       "name" : "log",
-      "nodeId" : "0d8a8d32-0572-4588-b3a0-caa95074bb7b",
+      "nodeId" : "6807303d-63b8-49b4-9f6c-6dbecb24af0d",
       "description" : "",
       "properties" : {
         "_type" : "log",
@@ -87,8 +87,30 @@
     "enabled" : true,
     "routeId" : 2,
     "route" : [ {
+      "name" : "timer",
+      "nodeId" : "86fd2461-072b-42ea-b5bc-671ed8e36539",
+      "description" : "",
+      "properties" : {
+        "_type" : "timer",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "daemon" : true,
+        "delay" : "1000",
+        "fixedRate" : false,
+        "name" : "timer",
+        "period" : "10000",
+        "repeatCount" : "0",
+        "setScheduleTime" : false,
+        "time" : "2021-12-31 00:00:00",
+        "timerName" : "timer",
+        "url" : ""
+      },
+      "_type" : "timer",
+      "kameletPropertiesUrl" : "?timerName=timer&period=10000&repeatCount=0&delay=1000&fixedRate=false&daemon=true&setScheduleTime=false&time=2021-12-31 00:00:00"
+    }, {
       "name" : "file",
-      "nodeId" : "80262eac-2117-478b-8c77-82fa2dfba5c6",
+      "nodeId" : "182486b3-069c-4a2b-9041-76911f4f2072",
       "description" : "",
       "properties" : {
         "_type" : "file",
@@ -102,22 +124,19 @@
         "bufferSize" : "131072",
         "camelGroup" : "component",
         "charset" : "utf-8",
-        "delete" : false,
         "directoryName" : "/tmp",
         "fileName" : "package.json",
         "flatten" : false,
         "name" : "file",
-        "noop" : false,
-        "recursive" : false,
         "setCharset" : false,
         "toDynamicEndpoint" : false,
         "url" : ""
       },
       "_type" : "file",
-      "kameletPropertiesUrl" : "?directoryName=/tmp&autoCreate=true&bufferSize=131072&setCharset=false&charset=utf-8&delete=false&fileName=package.json&flatten=false&noop=false&recursive=false"
+      "kameletPropertiesUrl" : "?directoryName=/tmp&autoCreate=true&bufferSize=131072&setCharset=false&charset=utf-8&fileName=package.json&flatten=false"
     }, {
       "name" : "log",
-      "nodeId" : "ae6d3416-4a23-409e-ba76-85a225984cbe",
+      "nodeId" : "6b86461e-0808-4ac9-b9de-897efbd6aaba",
       "description" : "",
       "properties" : {
         "_type" : "log",
@@ -150,7 +169,7 @@
   "name" : "timer-test",
   "description" : "Timer Test",
   "createdAt" : "2023-10-10T14:00:21.020402863",
-  "updatedAt" : "2023-10-10T20:22:52.394585438",
+  "updatedAt" : "2023-10-10T20:25:38.602525336",
   "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
   "updatedBy" : "123e4567-e89b-12d3-a456-426655440011"
 }
