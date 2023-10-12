@@ -1,5 +1,5 @@
 {
-  "revision" : 11,
+  "revision" : 12,
   "compression" : false,
   "dataAnalyzer" : true,
   "replicas" : 1,
@@ -14,7 +14,7 @@
     "routeId" : 1,
     "route" : [ {
       "name" : "timer",
-      "nodeId" : "0e8dd713-cc9b-4e43-b804-1b582d43f92a",
+      "nodeId" : "52c1b030-60d6-43d9-8213-4162911c3867",
       "description" : "",
       "properties" : {
         "_type" : "timer",
@@ -36,7 +36,7 @@
       "kameletPropertiesUrl" : "?timerName=timer&period=1000&repeatCount=0&delay=1000&fixedRate=false&daemon=true&setScheduleTime=false&time=2021-12-31 00:00:00"
     }, {
       "name" : "setBody",
-      "nodeId" : "2740dec4-edaf-438a-b429-ebffcc1ff981",
+      "nodeId" : "3a148baa-acce-47f1-88e8-06405888c95e",
       "description" : "",
       "properties" : {
         "_type" : "setBody",
@@ -54,7 +54,7 @@
       "kameletPropertiesUrl" : "?language=Simple&expression=exchangeId: ${exchangeId}&addNamespaces=false&suppressExceptions=false"
     }, {
       "name" : "log",
-      "nodeId" : "d5cb8dbe-9b72-416a-8ac6-1c4d523f9cc6",
+      "nodeId" : "85b5fc38-2c75-4dd6-a5bc-e48ca5863014",
       "description" : "",
       "properties" : {
         "_type" : "log",
@@ -88,7 +88,7 @@
     "routeId" : 2,
     "route" : [ {
       "name" : "timer",
-      "nodeId" : "640a0457-448b-425f-bf92-303b10fcb898",
+      "nodeId" : "b4b59447-3385-4658-a717-890b9e4ecebf",
       "description" : "",
       "properties" : {
         "_type" : "timer",
@@ -110,7 +110,7 @@
       "kameletPropertiesUrl" : "?timerName=timer&period=1000&repeatCount=0&delay=1000&fixedRate=false&daemon=true&setScheduleTime=false&time=2021-12-31 00:00:00"
     }, {
       "name" : "setBody",
-      "nodeId" : "d2c680d8-f478-4a7d-8472-a799799b2f7e",
+      "nodeId" : "b22f04d2-df92-4df4-a371-5508b6577ddb",
       "description" : "",
       "properties" : {
         "_type" : "setBody",
@@ -128,7 +128,7 @@
       "kameletPropertiesUrl" : "?language=Simple&expression=exchangeId: ${exchangeId}&addNamespaces=false&suppressExceptions=false"
     }, {
       "name" : "log",
-      "nodeId" : "e4e6f1ac-3f54-4868-95e0-2cb3840e1f1c",
+      "nodeId" : "b424fe0b-6bed-42d9-a9d2-e0d058cf01a9",
       "description" : "",
       "properties" : {
         "_type" : "log",
@@ -162,7 +162,7 @@
     "routeId" : 3,
     "route" : [ {
       "name" : "timer",
-      "nodeId" : "047974b3-ce63-4f1d-a4b3-99a35748df3e",
+      "nodeId" : "1feed9fc-81ee-4012-ba30-e028050c7b3d",
       "description" : "",
       "properties" : {
         "_type" : "timer",
@@ -184,7 +184,7 @@
       "kameletPropertiesUrl" : "?timerName=timer&period=1000&repeatCount=0&delay=1000&fixedRate=false&daemon=true&setScheduleTime=false&time=2021-12-31 00:00:00"
     }, {
       "name" : "timer",
-      "nodeId" : "35206201-5e16-411b-8a69-8d1ae8b74e61",
+      "nodeId" : "940eb5e6-a92d-45a7-bdb1-1648db43c801",
       "description" : "",
       "properties" : {
         "_type" : "timer",
@@ -204,6 +204,59 @@
       },
       "_type" : "timer",
       "kameletPropertiesUrl" : "?timerName=timer&period=1000&repeatCount=0&delay=1000&fixedRate=false&daemon=true&setScheduleTime=false&time=2021-12-31 00:00:00"
+    }, {
+      "name" : "messageFilter",
+      "nodeId" : "1df9a2aa-a1d0-4d4e-a7f2-eda3f74d9a24",
+      "description" : "",
+      "properties" : {
+        "_type" : "messageFilter",
+        "active" : true,
+        "camelGroup" : "routing",
+        "name" : "messageFilter",
+        "url" : ""
+      },
+      "_type" : "messageFilter",
+      "branches" : [ {
+        "type" : "filter",
+        "label" : "filter",
+        "route" : [ {
+          "name" : "log",
+          "nodeId" : "ad25507b-107a-4e53-b3fc-6aab14366e92",
+          "description" : "",
+          "properties" : {
+            "_type" : "log",
+            "active" : true,
+            "advancedParameters" : [ ],
+            "camelGroup" : "component",
+            "level" : "INFO",
+            "logType" : "EIP",
+            "loggerName" : "log",
+            "message" : "headers: ${headers}; body: ${body}",
+            "multiline" : false,
+            "name" : "log",
+            "showAll" : false,
+            "showBody" : true,
+            "showBodyType" : true,
+            "showCaughtException" : false,
+            "showExchangeId" : false,
+            "showHeaders" : false,
+            "showProperties" : false,
+            "showStackTrace" : false,
+            "toDynamicEndpoint" : false,
+            "url" : ""
+          },
+          "_type" : "log",
+          "kameletPropertiesUrl" : "?loggerName=log&level=INFO&logType=EIP&multiline=false&showAll=false&showBody=true&showBodyType=true&showCaughtException=false&showExchangeId=false&showHeaders=false&showProperties=false&showStackTrace=false&message=headers: ${headers}; body: ${body}"
+        } ],
+        "properties" : {
+          "addNamespaces" : "false",
+          "condition" : "${header.foo} == \"bar\"",
+          "language" : "Simple",
+          "namespaces" : [ ],
+          "suppressExceptions" : "false"
+        }
+      } ],
+      "kameletPropertiesUrl" : ""
     } ]
   } ],
   "traits" : [ ],
@@ -211,7 +264,7 @@
   "name" : "FirstGitIntegration",
   "description" : "FirstGitIntegration",
   "createdAt" : "2023-09-18T14:37:05.998042148",
-  "updatedAt" : "2023-10-04T20:21:36.282410673",
+  "updatedAt" : "2023-10-11T17:45:16.509010256",
   "createdBy" : "a1e03be4-7ba1-462b-a7af-9848c607ead1",
   "updatedBy" : "123e4567-e89b-12d3-a456-426655440011"
 }

@@ -1,11 +1,11 @@
 {
-  "version" : "test2.dev.jetic.io",
-  "host" : "1",
+  "version" : "1",
+  "host" : "test.devbeta.jetic.io",
   "id" : "a616bbc1-a8f9-4469-a410-ea41bbf501d5",
   "name" : "api-test2",
   "description" : null,
   "createdAt" : "2023-10-10T14:00:20.497491044",
-  "updatedAt" : "2023-10-10T14:00:20.497491861",
+  "updatedAt" : "2023-10-12T16:26:02.580340624",
   "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
   "updatedBy" : "123e4567-e89b-12d3-a456-426655440011",
   "endpoints" : [ {

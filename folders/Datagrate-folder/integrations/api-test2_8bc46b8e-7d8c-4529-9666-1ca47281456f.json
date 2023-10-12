@@ -1,23 +1,24 @@
 {
-  "revision" : 57,
+  "revision" : 60,
   "compression" : false,
   "dataAnalyzer" : true,
   "replicas" : 1,
   "openApiUuid" : "a616bbc1-a8f9-4469-a410-ea41bbf501d5",
-  "currentProfileUuid" : "123e4567-e89b-12d3-a456-426655440031",
+  "currentProfileUuid" : "54a1bd03-bf22-4cf9-8f5f-b10b40f166e9",
   "parameterGroupUuids" : [ ],
   "repoResourceUuids" : [ ],
   "routeDefinitions" : [ {
-    "id" : null,
+    "id" : 1,
     "camelRouteId" : "route-1",
     "enabled" : true,
     "routeId" : 1,
     "route" : [ {
       "name" : "getRequest",
-      "nodeId" : "3601a59a-a698-4876-9d1c-5bea854f8795",
+      "nodeId" : "15d235fa-d90b-4e78-a4fd-540d0e186077",
       "description" : "",
       "properties" : {
         "_type" : "restApi",
+        "active" : true,
         "camelGroup" : "rest",
         "consumes" : "application/json",
         "endpoint" : "/",
@@ -29,13 +30,14 @@
         "url" : ""
       },
       "_type" : "restApi",
-      "kameletPropertiesUrl" : "?consumes=application/json&endpoint=/&method=get&operationName=GET&produces=application/json&requestmethod=GET"
+      "kameletPropertiesUrl" : "?endpoint=/&operationName=GET&requestmethod=GET&consumes=application/json&produces=application/json&method=get"
     }, {
       "name" : "setBody",
-      "nodeId" : "9d22075a-190c-437b-8b2a-26c22d11df05",
+      "nodeId" : "5ea92192-6e79-4d31-adbe-51ff5a3152c3",
       "description" : "",
       "properties" : {
         "_type" : "setBody",
+        "active" : true,
         "addNamespaces" : false,
         "camelGroup" : "core",
         "expression" : "exchangeId: ${exchangeId} Hello There",
@@ -46,13 +48,14 @@
         "url" : ""
       },
       "_type" : "setBody",
-      "kameletPropertiesUrl" : "?addNamespaces=false&expression=exchangeId: ${exchangeId} Hello There&language=Simple&suppressExceptions=false"
+      "kameletPropertiesUrl" : "?language=Simple&expression=exchangeId: ${exchangeId} Hello There&addNamespaces=false&suppressExceptions=false"
     }, {
       "name" : "log",
-      "nodeId" : "ad7ce81c-2958-4a64-b4bf-ed895387a25d",
+      "nodeId" : "f214a94a-ed41-4ac8-a4db-16b345494b83",
       "description" : "",
       "properties" : {
         "_type" : "log",
+        "active" : true,
         "advancedParameters" : [ ],
         "camelGroup" : "component",
         "level" : "INFO",
@@ -73,13 +76,14 @@
         "url" : ""
       },
       "_type" : "log",
-      "kameletPropertiesUrl" : "?level=INFO&logType=EIP&loggerName=log&message=headers: ${headers}; body: ${body}&multiline=false&showAll=false&showBody=true&showBodyType=true&showCaughtException=false&showExchangeId=false&showHeaders=false&showProperties=false&showStackTrace=false"
+      "kameletPropertiesUrl" : "?loggerName=log&level=INFO&logType=EIP&multiline=false&showAll=false&showBody=true&showBodyType=true&showCaughtException=false&showExchangeId=false&showHeaders=false&showProperties=false&showStackTrace=false&message=headers: ${headers}; body: ${body}"
     }, {
       "name" : "log",
-      "nodeId" : "b7c9c5a4-4b72-4bba-a13c-9bb6feecf0d7",
+      "nodeId" : "86624796-4924-49e8-906d-a5d4d827a805",
       "description" : "",
       "properties" : {
         "_type" : "log",
+        "active" : true,
         "advancedParameters" : [ ],
         "camelGroup" : "component",
         "level" : "INFO",
@@ -100,15 +104,22 @@
         "url" : ""
       },
       "_type" : "log",
-      "kameletPropertiesUrl" : "?level=INFO&logType=EIP&loggerName=log&message=headers: ${headers}; body: ${body}&multiline=false&showAll=false&showBody=true&showBodyType=true&showCaughtException=false&showExchangeId=false&showHeaders=false&showProperties=false&showStackTrace=false"
+      "kameletPropertiesUrl" : "?loggerName=log&level=INFO&logType=EIP&multiline=false&showAll=false&showBody=true&showBodyType=true&showCaughtException=false&showExchangeId=false&showHeaders=false&showProperties=false&showStackTrace=false&message=headers: ${headers}; body: ${body}"
     } ]
   } ],
-  "traits" : [ ],
+  "traits" : [ {
+    "name" : "ingress",
+    "configuration" : {
+      "auto" : true,
+      "enabled" : true,
+      "host" : "test.devbeta.jetic.io"
+    }
+  } ],
   "id" : "8bc46b8e-7d8c-4529-9666-1ca47281456f",
   "name" : "api-test2",
   "description" : "API Test 2",
   "createdAt" : "2023-10-10T14:00:21.092504258",
-  "updatedAt" : "2023-10-10T14:00:21.092505165",
+  "updatedAt" : "2023-10-12T16:30:11.942913525",
   "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
   "updatedBy" : "123e4567-e89b-12d3-a456-426655440011"
 }
