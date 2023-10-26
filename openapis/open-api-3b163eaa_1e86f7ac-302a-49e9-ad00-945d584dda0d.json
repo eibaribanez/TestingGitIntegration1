@@ -1,0 +1,26 @@
+{
+  "version" : "0.0.1",
+  "host" : "3b163eaa.devbeta.jetic.io",
+  "id" : "1e86f7ac-302a-49e9-ad00-945d584dda0d",
+  "name" : "open-api-3b163eaa",
+  "description" : null,
+  "createdAt" : "2023-10-26T21:59:09.57114864",
+  "updatedAt" : "2023-10-26T21:59:09.614391724",
+  "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "updatedBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "endpoints" : [ {
+    "uuid" : "9f6148b4-4656-4ec4-b5a0-677097ad450b",
+    "name" : "undefined",
+    "path" : "/api/v1/test",
+    "pathVariables" : [ ],
+    "operations" : [ {
+      "uuid" : "2a78efc3-f6f5-47b3-9c7a-a1d8f2b53512",
+      "operationId" : "default",
+      "method" : "get",
+      "consumes" : "application/json",
+      "produces" : "application/json"
+    } ]
+  } ],
+  "imported" : false,
+  "specification" : "{\"openapi\":\"3.0.2\",\"info\":{\"title\":\"open-api-3b163eaa\",\"version\":\"0.0.1\"},\"servers\":[{\"url\":\"/\"}],\"paths\":{\"/api/v1/test\":{\"get\":{\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"type\":\"string\"}}},\"description\":\"default response description\"}},\"operationId\":\"default\"}}},\"components\":{}}"
+}

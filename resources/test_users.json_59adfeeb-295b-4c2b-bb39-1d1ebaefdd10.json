@@ -1,0 +1,17 @@
+{
+  "type" : "RESOURCE_FILE",
+  "properties" : {
+    "compression" : "false",
+    "content" : "Hello from text.txt",
+    "file" : "data:application/json;base64,W3sKICAiX2lkIjogewogICAgIiRiaW5hcnkiOiB7CiAgICAgICJiYXNlNjQiOiAiRWo1RloraWJFdE9rVmtKbVZVUUFFQT09IiwKICAgICAgInN1YlR5cGUiOiAiMDQiCiAgICB9CiAgfSwKICAibmFtZSI6ICJUZXN0IFVzZXIiLAogICJlbWFpbCI6ICJ0ZXN0dXNlckBtYWlsc2VydmVyLmNvbSIsCiAgInJvbGUiOiAiVXNlciIsCiAgInNldHRpbmdzIjogewogICAgImVtYWlsTm90aWZpY2F0aW9ucyI6IGZhbHNlCiAgfSwKICAidGVuYW50IjogWwogICAgewogICAgICAiX2lkIjogewogICAgICAgICIkYmluYXJ5IjogewogICAgICAgICAgImJhc2U2NCI6ICJFajVGWitpYkV0T2tWa0ptVlVRQUFBPT0iLAogICAgICAgICAgInN1YlR5cGUiOiAiMDQiCiAgICAgICAgfQogICAgICB9LAogICAgICAiY29tcGFueU5hbWUiOiAiVGVzdCIsCiAgICAgICJwcmVmaXgiOiAidGVzdC10ZXN0IiwKICAgICAgImNyZWF0ZWRBdCI6IHsKICAgICAgICAiJGRhdGUiOiAiMjAyMS0wNy0zMFQxMjozNjowNy44NjJaIgogICAgICB9LAogICAgICAidXBkYXRlZEF0IjogewogICAgICAgICIkZGF0ZSI6ICIyMDIxLTA3LTMwVDEyOjM2OjA3Ljg2NVoiCiAgICAgIH0sCiAgICAgICJfY2xhc3MiOiAiY29tLmRhdGFncmF0ZS5jYW1lbC5jbG91ZC5tb2RlbHMudGVuYW50LlRlbmFudCIKICAgIH0KICBdLAogICJjcmVhdGVkQXQiOiB7CiAgICAiJGRhdGUiOiAiMjAyMS0wNy0zMFQxMjozNjowOC4xODFaIgogIH0sCiAgInVwZGF0ZWRBdCI6IHsKICAgICIkZGF0ZSI6ICIyMDIxLTA4LTAzVDE5OjE0OjE1Ljk4N1oiCiAgfSwKICAiX2NsYXNzIjogImNvbS5kYXRhZ3JhdGUuY2FtZWwuY2xvdWQubW9kZWxzLnVzZXIuVXNlciIKfV0=",
+    "filename" : "test_users.json",
+    "type" : "File"
+  },
+  "id" : "59adfeeb-295b-4c2b-bb39-1d1ebaefdd10",
+  "name" : "test_users.json",
+  "description" : "test_users.json",
+  "createdAt" : "2023-10-26T22:02:04.270018311",
+  "updatedAt" : "2023-10-26T22:02:18.198086145",
+  "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "updatedBy" : "123e4567-e89b-12d3-a456-426655440011"
+}
